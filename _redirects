@@ -1,0 +1,6 @@
+# SPA路由重定向配置 - GitHub Pages
+/*    /seu-711-seclub.github.io/index.html   200
+
+# 静态资源直接访问
+/assets/*  /seu-711-seclub.github.io/assets/:splat  200
+/content/*  /seu-711-seclub.github.io/content/:splat  200
