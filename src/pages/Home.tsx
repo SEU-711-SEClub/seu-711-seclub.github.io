@@ -122,31 +122,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-// {/* Statistics */}
-// <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background-surface">
-//   <div className="max-w-7xl mx-auto">
-//     <h2 className="text-h2 font-bold text-center text-primary-900 mb-12">
-//       社区数据
-//     </h2>
-    
-//     {/* 添加了网格容器来包裹统计项目 */}
-//     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-//       {/* 统计项目 1 */}
-//       <div className="text-center">
-//         <div className="text-4xl font-bold text-accent-orange mb-2">
-//           {index?.experiences?.all?.length || '50+'}
-//         </div>
-//         <div className="text-body text-neutral-600">经验分享</div>
-//       </div>
-      
-//       {/* 统计项目 2 */}
-//       <div className="text-center">
-//         <div className="text-4xl font-bold text-semantic-success mb-2">4</div>
-//         <div className="text-body text-neutral-600">覆盖届数</div>
-//       </div>
-//     </div>
-//   </div>
-// </section>
 
       {/* Quick Entry */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
