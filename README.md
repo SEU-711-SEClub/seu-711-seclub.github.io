@@ -94,7 +94,7 @@ pnpm run build:content
 ### 添加新内容
 
 #### 活动公告
-1. 在 `public/content/announcements/` 创建 `.md` 文件
+1. 在 `public/content/experiences/announcements/` 创建 `.md` 文件
 2. 按照Front Matter格式填写元数据
 3. 编写Markdown正文内容
 4. 重新构建网站
@@ -196,17 +196,6 @@ excerpt: "文章摘要"
 - **平板**: 2列网格，卡片内边距32px
 - **移动**: 单列布局，间距减少30%
 
-## 🚀 部署
-
-### GitHub Pages部署
-1. 将 `dist` 文件夹内容推送到 `gh-pages` 分支
-2. 或使用GitHub Actions自动部署
-
-### 其他静态托管
-- Vercel
-- Netlify
-- 阿里云OSS
-- 腾讯云COS
 
 ## 📊 性能优化
 
@@ -249,11 +238,11 @@ MIT License
 ## 📞 联系我们
 
 - **项目地址**：[GitHub Repository]
-- **在线演示**：[https://xqk91081cm80.space.minimaxi.com](https://xqk91081cm80.space.minimaxi.com)
-- **邮箱**：contact@711club.edu.cn
+- **在线演示**：[https://seu-711-seclub.github.io/](https://seu-711-seclub.github.io/)
+- **邮箱**：liumengxuan@xuantianit.cn
 
 ---
 
-**最后更新**：2025-11-01  
+**最后更新**：2025-11-02  
 **版本**：v1.0.0  
-**作者**：MiniMax Agent
+**作者**：LiuMengxuan
