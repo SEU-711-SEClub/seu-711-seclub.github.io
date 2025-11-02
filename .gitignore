@@ -230,7 +230,6 @@
 
 # Gatsby files
 **/.cache/
-**/public
 
 # Vue.js
 **/dist/
