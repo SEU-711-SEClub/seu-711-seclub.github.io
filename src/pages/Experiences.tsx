@@ -84,11 +84,6 @@ const categoryHighlights: Record<ExperienceCategory, HighlightContent> = {
       },
     ],
     notice: 'Tip: 若你有新的经验想分享，滚动至页面底部即可找到「提交经验分享」入口。',
-    image: {
-      src: '/images/college-path-roadmap.png',
-      alt: '保研、考研、留学、就业时间规划示意图',
-      caption: '保研、考研、留学、就业四条路径的关键节点一图掌握，帮你提早规划大学四年的节奏。',
-    },
   },
   保研: {
     title: '保研关键信息整理',
