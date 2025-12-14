@@ -56,6 +56,9 @@ function generateContentIndex() {
       categories: {},
       all: []
     },
+    undergrad: {
+      requirements: []
+    },
     lastUpdated: new Date().toISOString()
   };
 
@@ -99,6 +102,7 @@ function generateContentIndex() {
             excerpt: frontMatter.excerpt || excerpt,
             tags: frontMatter.tags || [],
             category: subcategory,
+            link: frontMatter.link || '',
             file: `experiences/${subcategory}/${file}`
           };
 
@@ -106,6 +110,46 @@ function generateContentIndex() {
           index.experiences.all.push(experience);
         }
       }
+    }
+  }
+
+  // 处理本科培养 - 毕业要求（markdown 可编辑）
+  const undergradRequirementsDir = path.join(contentDir, 'undergrad', 'requirements');
+  if (fs.existsSync(undergradRequirementsDir)) {
+    const requirementFiles = fs.readdirSync(undergradRequirementsDir)
+      .filter(file => file.endsWith('.md'))
+      .sort((a, b) => {
+        const statA = fs.statSync(path.join(undergradRequirementsDir, a));
+        const statB = fs.statSync(path.join(undergradRequirementsDir, b));
+        return statB.mtimeMs - statA.mtimeMs;
+      });
+
+    for (const file of requirementFiles) {
+      const filePath = path.join(undergradRequirementsDir, file);
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      const { data: frontMatter, content } = parseFrontmatter(fileContent);
+
+      const excerpt = content
+        .replace(/#+\s+/g, '')
+        .replace(/\*\*/g, '')
+        .replace(/\*/g, '')
+        .replace(/`/g, '')
+        .replace(/\[(.+?)\]\(.+?\)/g, '$1')
+        .trim()
+        .substring(0, 150) + '...';
+
+      const requirement = {
+        title: frontMatter.title || file.replace('.md', ''),
+        author: frontMatter.author || '匿名',
+        year: frontMatter.year || (frontMatter.date ? frontMatter.date.slice(0, 4) : '未知'),
+        date: frontMatter.date || '2025-01-01',
+        excerpt: frontMatter.excerpt || excerpt,
+        tags: frontMatter.tags || [],
+        category: frontMatter.category || '毕业要求',
+        file: `undergrad/requirements/${file}`
+      };
+
+      index.undergrad.requirements.push(requirement);
     }
   }
 
@@ -118,6 +162,7 @@ function generateContentIndex() {
   experienceSubcategories.forEach(cat => {
     console.log(`  - ${cat}: ${index.experiences.categories[cat]?.length || 0}篇`);
   });
+  console.log(`- 本科毕业要求: ${index.undergrad.requirements.length}篇`);
 }
 
 // 执行生成

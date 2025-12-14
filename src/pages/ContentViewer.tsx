@@ -7,13 +7,13 @@ import useScrollToTop from '../hooks/useScrollToTop';
 
 const ContentViewer = () => {
   useScrollToTop(); // 页面加载时滚动到顶部
-  const { type, category, filename } = useParams();
+  const { type, category, subcategory, filename } = useParams();
   
   // 构造正确的文件路径
-  const filePath = type === 'experiences' ? `${type}/${category}/${filename}` : `${type}/${filename}`;
+  const filePath = [type, category, subcategory, filename].filter(Boolean).join('/');
   
   console.log('=== ContentViewer Debug ===');
-  console.log('URL参数:', { type, category, filename });
+  console.log('URL参数:', { type, category, subcategory, filename });
   console.log('构造的文件路径:', filePath);
   
   const { content, loading, error } = useMarkdownContent(filePath);
@@ -106,6 +106,9 @@ const ContentViewer = () => {
     }
   }, [content, filename, category]);
 
+  const backPath = type === 'experiences' ? '/experiences' : type === 'undergrad' ? '/undergrad' : '/activities';
+  const backLabel = type === 'experiences' ? '经验分享' : type === 'undergrad' ? '本科培养' : '活动中心';
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -123,7 +126,7 @@ const ContentViewer = () => {
         <div className="text-center">
           <p className="text-body text-error mb-4">加载内容时出错: {error}</p>
           <Link 
-            to={type === 'experiences' ? '/experiences' : '/activities'}
+            to={backPath}
             className="bg-primary-500 text-white px-6 py-3 rounded-lg hover:bg-primary-600 transition-colors"
           >
             返回列表
@@ -139,11 +142,11 @@ const ContentViewer = () => {
         {/* 返回按钮 */}
         <div className="mb-8">
           <Link
-            to={type === 'experiences' ? '/experiences' : '/activities'}
+            to={backPath}
             className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors"
           >
             <ArrowLeft size={20} className="mr-2" />
-            返回{type === 'experiences' ? '经验分享' : '活动中心'}
+            返回{backLabel}
           </Link>
         </div>
 
@@ -198,10 +201,10 @@ const ContentViewer = () => {
         {/* 底部导航 */}
         <footer className="mt-12 text-center">
           <Link
-            to={type === 'experiences' ? '/experiences' : '/activities'}
+            to={backPath}
             className="bg-primary-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-600 transition-colors"
           >
-            返回{type === 'experiences' ? '经验分享' : '活动中心'}
+            返回{backLabel}
           </Link>
         </footer>
       </div>

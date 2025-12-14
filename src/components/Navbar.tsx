@@ -10,6 +10,7 @@ const Navbar = () => {
     { name: '首页', href: '/' },
     { name: '关于我们', href: '/about' },
     { name: '内容中心', href: '/experiences' },
+    { name: '本科培养', href: '/undergrad' },
     { name: '生涯规划', href: '/career' },
   ];
 

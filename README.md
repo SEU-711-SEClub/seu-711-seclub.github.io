@@ -2,11 +2,17 @@
 
 一个温暖专业的软件学院交流社区官网，支持动态内容管理，便于维护更新。
 
+## 🔥最近更新
+- 2025-12-14：🚀更新本科毕业要求与毕业设计时间轴文档，补充更新 README 维护说明。
+- 2025-11-09：✨内容中心新增标签引导信息块（含图标/配图提示）；更新 README 与内容管理指南，补充分类引导与目录结构；调整求职分类提示，指向社团招聘/交流信息。
+- 2025-11-02：✨官网建立。
+
 ## 🌟 项目特色
 
 ### 核心功能
 - **8个完整页面**：首页、关于我们、交流社区、经验分享、生涯规划、活动中心、加入我们、成员专区
 - **分类引导区**：内容中心按标签展示对应的引导提示、关键要点与配图，快速了解不同成长路径
+- **本科培养专区**：本科毕业要求概览与毕业设计时间轴，支持分类切换、阶段任务与资料链接
 - **动态内容系统**：真正的Markdown文件读取和管理
 - **响应式设计**：桌面3-4列，平板2列，移动单列完美适配
 - **毛玻璃效果**：活动中心和交流社区的科技感界面
@@ -25,7 +31,7 @@
 - **设计风格**：90%专业极简 + 10%科技感毛玻璃
 - **组件规范**：完全基于设计Tokens的一致性系统
 
-## 🚀 快速开始
+## 💻 快速开始
 
 ### 环境要求
 - Node.js 18+
@@ -69,6 +75,7 @@ pnpm run build:content
 │  │  ├── Experiences.tsx   # 经验分享/内容中心
 │  │  ├── Career.tsx        # 生涯规划
 │  │  ├── Activities.tsx    # 活动中心
+│  │  ├── Undergrad.tsx     # 本科培养（毕业要求/毕业设计）
 │  │  ├── Join.tsx          # 加入我们
 │  │  └── Member.tsx        # 成员专区
 │  └── App.tsx              # 应用入口
@@ -82,6 +89,12 @@ pnpm run build:content
 │  │  │  ├── 实习/
 │  │  │  ├── 考研/
 │  │  │  └── 技术栈/
+│  │  ├── undergrad/
+│  │  │  ├── requirements/
+│  │  │  │  ├── summary.json      # 毕业要求索引
+│  │  │  │  └── *.md              # 毕业要求详情
+│  │  │  └── projects/
+│  │  │      └── timeline.json    # 毕业设计时间轴
 │  │  └── index.json        # 内容索引（自动生成）
 │  ├── images/              # 公共图片资源（例如分类引导配图）
 │  │  └── college-path-roadmap.png  # 保研、考研、留学、就业时间规划示意图
@@ -141,6 +154,21 @@ excerpt: "文章摘要"
 - **技术栈**：技术学习分享
 
 详细说明请参考 [CONTENT_MANAGEMENT.md](./CONTENT_MANAGEMENT.md)
+
+### 本科毕业要求与毕业设计时间轴
+
+- 页面：`/undergrad?tab=requirements`（毕业要求）、`/undergrad?tab=projects`（毕业设计时间轴），URL 可直接切换 tab。
+- 毕业要求数据：
+  - 列表索引：`public/content/undergrad/requirements/summary.json`（指向各 Markdown）。
+  - 详情 Markdown：`public/content/undergrad/requirements/*.md`。标题统一：课程学分、毕业设计、人文素质讲座、SRTP 分值、社会实践、志愿时长、劳动教育。
+- 毕业设计时间轴数据：`public/content/undergrad/projects/timeline.json`
+  - 节点/区间可通过 `categories` 指定可见分类（延期节点仅在考研升学/学分积欠可见，正常节点仅在其他分类可见）。
+  - 两时间点之间的任务写在对应 interval 的 `detail`/`links`/`image` 中；时间点显示官方信息，间隔卡片显示阶段任务。
+  - 红色《…》标记代表需要提交/撰写的内容。
+- 维护流程：
+  1) 编辑上述 JSON/Markdown。
+  2) 运行 `npm run build:content` 生成最新索引。
+  3) 如需跳转到时间轴，可在文档中使用 `/undergrad?tab=projects` 链接。
 
 ## 🎨 设计系统
 
@@ -246,6 +274,6 @@ MIT License
 
 ---
 
-**最后更新**：2025-11-02  
-**版本**：v1.0.0  
-**作者**：LiuMengxuan
+**最后更新**：2025-12-14 
+**版本**：v1.2.0  
+**作者**：LiuMengxuan 等

@@ -1,0 +1,20 @@
+{
+  "kpi": [
+    { "key": "courses", "label": "课程学分", "target": 1, "unit": "", "comparison": "gte" },
+    { "key": "graduation_project", "label": "毕业设计", "target": 1, "unit": "", "comparison": "gte" },
+    { "key": "srtp", "label": "SRTP 学分", "target": 2, "unit": "分", "comparison": "gte" },
+    { "key": "practice", "label": "社会实践", "target": 1, "unit": "分", "comparison": "gte" },
+    { "key": "volunteer", "label": "志愿时长", "target": 12, "unit": "小时", "comparison": "gte" },
+    { "key": "labor", "label": "劳动教育", "target": 26, "unit": "学时", "comparison": "gte" },
+    { "key": "humanities", "label": "人文素质讲座", "target": 8, "unit": "次", "comparison": "gte" }
+  ],
+  "modules": [
+    { "key": "courses", "title": "课程学分", "file": "course-credit.md", "tags": ["学分", "均绩", "毕业/学位"] },
+    { "key": "graduation_project", "title": "毕业设计", "file": "graduation-project.md", "tags": ["毕设", "进度"] },
+    { "key": "humanities", "title": "人文素质讲座", "file": "humanities.md", "tags": ["讲座", "通识"] },
+    { "key": "srtp", "title": "SRTP 分值", "file": "srtp.md", "tags": ["科研", "创新创业"] },
+    { "key": "practice", "title": "社会实践", "file": "social-practice.md", "tags": ["社会实践", "公开课"] },
+    { "key": "volunteer", "title": "志愿时长", "file": "volunteer-hours.md", "tags": ["志愿", "服务时长"] },
+    { "key": "labor", "title": "劳动教育", "file": "labor-education.md", "tags": ["劳动", "学时"] }
+  ]
+}

@@ -75,6 +75,12 @@ const Home = () => {
             >
               浏览内容中心
             </Link>
+            <Link
+              to="/undergrad?tab=requirements"
+              className="bg-accent-red text-white px-8 py-4 rounded-md font-semibold hover:bg-accent-dark transition-all duration-fast transform hover:-translate-y-0.5 hover:shadow-lg shadow-accent-red/30"
+            >
+              浏览本科培养
+            </Link>
           </div>
         </div>
       </section>
@@ -152,12 +158,32 @@ const Home = () => {
                     <p className="text-body text-neutral-600 mb-3">
                       {announcement.excerpt}
                     </p>
-                    <Link 
-                      to={`/content/experiences/announcements/${announcement.file.split('/').pop()}`}
-                      className="text-primary-600 hover:text-primary-700 text-body font-medium transition-colors"
-                    >
-                      查看详情 →
-                    </Link>
+                    {announcement.link ? (
+                      announcement.link.startsWith('http') ? (
+                        <a
+                          href={announcement.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-primary-600 hover:text-primary-700 text-body font-medium transition-colors"
+                        >
+                          查看详情 →
+                        </a>
+                      ) : (
+                        <Link
+                          to={announcement.link}
+                          className="text-primary-600 hover:text-primary-700 text-body font-medium transition-colors"
+                        >
+                          查看详情 →
+                        </Link>
+                      )
+                    ) : (
+                      <Link 
+                        to={`/content/experiences/announcements/${announcement.file.split('/').pop()}`}
+                        className="text-primary-600 hover:text-primary-700 text-body font-medium transition-colors"
+                      >
+                        查看详情 →
+                      </Link>
+                    )}
                   </div>
                 </div>
               ))}
