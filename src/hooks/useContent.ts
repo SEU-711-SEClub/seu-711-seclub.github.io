@@ -6,6 +6,7 @@ export interface Announcement {
   type: string;
   excerpt: string;
   file: string;
+  link?: string;
   location?: string;
   time?: string;
   participants?: string;
@@ -20,6 +21,70 @@ export interface Experience {
   tags: string[];
   category: string;
   file: string;
+  link?: string;
+}
+
+export interface UndergradRequirement {
+  title: string;
+  author: string;
+  year?: string;
+  date: string;
+  excerpt: string;
+  tags: string[];
+  category: string;
+  file: string;
+}
+
+export interface UndergradSummary {
+  kpi: {
+    key: string;
+    label: string;
+    current: number;
+    target: number;
+    unit?: string;
+    comparison?: 'gte' | 'lte' | 'eq';
+  }[];
+  modules: {
+    key: string;
+    title: string;
+    file: string;
+    tags?: string[];
+  }[];
+}
+
+export interface UndergradTimeline {
+  axis: {
+    categories: any;
+    id: string;
+    date: string;
+    label: string;
+    note?: string;
+    link?: string;
+  }[];
+  intervals?: {
+    categories: any;
+    id: string;
+    startId: string;
+    endId: string;
+    note?: string;
+  }[];
+  categories: {
+    name: string;
+    nodes: {
+      axisId: string;
+      title: string;
+      detail: string;
+      links?: { label: string; url: string }[];
+      image?: { src: string; alt: string; width?: number; height?: number };
+    }[];
+    ranges?: {
+      intervalId: string;
+      title: string;
+      detail: string;
+      links?: { label: string; url: string }[];
+      image?: { src: string; alt: string; width?: number; height?: number };
+    }[];
+  }[];
 }
 
 export interface ContentIndex {
@@ -27,6 +92,9 @@ export interface ContentIndex {
   experiences: {
     categories: Record<string, Experience[]>;
     all: Experience[];
+  };
+  undergrad?: {
+    requirements: UndergradRequirement[];
   };
   lastUpdated: string;
 }
@@ -89,6 +157,64 @@ export function useMarkdownContent(filePath: string) {
   }, [filePath]);
 
   return { content, loading, error };
+}
+
+// Hook for loading undergrad requirement summary (KPI + module mapping)
+export function useUndergradSummary() {
+  const [data, setData] = useState<UndergradSummary | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const load = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('/content/undergrad/requirements/summary.json');
+        if (!response.ok) {
+          throw new Error('Failed to load undergrad summary');
+        }
+        const json = await response.json();
+        setData(json);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Unknown error');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    load();
+  }, []);
+
+  return { data, loading, error };
+}
+
+// Hook for loading undergrad project timeline data
+export function useUndergradTimeline() {
+  const [data, setData] = useState<UndergradTimeline | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const load = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('/content/undergrad/projects/timeline.json');
+        if (!response.ok) {
+          throw new Error('Failed to load undergrad timeline');
+        }
+        const json = await response.json();
+        setData(json);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Unknown error');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    load();
+  }, []);
+
+  return { data, loading, error };
 }
 
 // Helper function to get filtered experiences

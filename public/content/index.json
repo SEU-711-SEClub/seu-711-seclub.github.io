@@ -4,7 +4,7 @@
     "categories": {
       "保研": [
         {
-          "title": "保研经验分享：从东南大学到清华计算机",
+          "title": "（展位用示例文章）保研经验分享：从东南大学到清华计算机",
           "author": "张三",
           "year": "2024届",
           "date": "2024-10-15",
@@ -15,12 +15,13 @@
             "\"计算机系\""
           ],
           "category": "保研",
+          "link": "",
           "file": "experiences/保研/graduate-school-experience.md"
         }
       ],
       "就业": [
         {
-          "title": "大厂实习经验分享：我在字节跳动的三个月",
+          "title": "（展位用示例文章）大厂实习经验分享：我在字节跳动的三个月",
           "author": "李四",
           "year": "2023届",
           "date": "2024-09-20",
@@ -31,16 +32,43 @@
             "\"前端开发\""
           ],
           "category": "就业",
+          "link": "",
           "file": "experiences/就业/internship-experience.md"
         }
       ],
-      "留学": [],
-      "实习": [],
-      "考研": [],
-      "技术栈": [],
       "announcements": [
         {
-          "title": "2024秋季聚会活动",
+          "title": "本科毕业要求与毕业设计时间轴更新",
+          "author": "711Club管理员",
+          "year": "2026届",
+          "date": "2025-12-14",
+          "excerpt": "上线本科毕业要求概览与毕业设计时间轴，支持分类切换、阶段任务与资料链接，点击即可前往查看。",
+          "tags": [
+            "\"本科培养\"",
+            "\"毕业要求\"",
+            "\"毕业设计\""
+          ],
+          "category": "announcements",
+          "link": "/undergrad?tab=projects",
+          "file": "experiences/announcements/undergrad-update-2025.md"
+        },
+        {
+          "title": "新成员欢迎指南",
+          "author": "711Club管理员",
+          "year": "2025届",
+          "date": "2025-11-01",
+          "excerpt": "欢迎加入711Club大家庭！为了帮助新成员快速融入社区，我们准备了这份详细的欢迎指南。",
+          "tags": [
+            "\"新成员\"",
+            "\"欢迎指南\"",
+            "\"社区介绍\""
+          ],
+          "category": "announcements",
+          "link": "",
+          "file": "experiences/announcements/new-member-welcome.md"
+        },
+        {
+          "title": "（占位用示例文章）2024秋季聚会活动",
           "author": "711Club管理员",
           "year": "2024届",
           "date": "2024-11-15",
@@ -51,27 +79,14 @@
             "\"技术交流\""
           ],
           "category": "announcements",
+          "link": "",
           "file": "experiences/announcements/2024-fall-meetup.md"
-        },
-        {
-          "title": "新成员欢迎指南",
-          "author": "711Club管理员",
-          "year": "2024届",
-          "date": "2024-11-01",
-          "excerpt": "欢迎加入711Club大家庭！为了帮助新成员快速融入社区，我们准备了这份详细的欢迎指南。",
-          "tags": [
-            "\"新成员\"",
-            "\"欢迎指南\"",
-            "\"社区介绍\""
-          ],
-          "category": "announcements",
-          "file": "experiences/announcements/new-member-welcome.md"
         }
       ]
     },
     "all": [
       {
-        "title": "保研经验分享：从东南大学到清华计算机",
+        "title": "（展位用示例文章）保研经验分享：从东南大学到清华计算机",
         "author": "张三",
         "year": "2024届",
         "date": "2024-10-15",
@@ -82,10 +97,11 @@
           "\"计算机系\""
         ],
         "category": "保研",
+        "link": "",
         "file": "experiences/保研/graduate-school-experience.md"
       },
       {
-        "title": "大厂实习经验分享：我在字节跳动的三个月",
+        "title": "（展位用示例文章）大厂实习经验分享：我在字节跳动的三个月",
         "author": "李四",
         "year": "2023届",
         "date": "2024-09-20",
@@ -96,10 +112,41 @@
           "\"前端开发\""
         ],
         "category": "就业",
+        "link": "",
         "file": "experiences/就业/internship-experience.md"
       },
       {
-        "title": "2024秋季聚会活动",
+        "title": "本科毕业要求与毕业设计时间轴更新",
+        "author": "711Club管理员",
+        "year": "2026届",
+        "date": "2025-12-14",
+        "excerpt": "上线本科毕业要求概览与毕业设计时间轴，支持分类切换、阶段任务与资料链接，点击即可前往查看。",
+        "tags": [
+          "\"本科培养\"",
+          "\"毕业要求\"",
+          "\"毕业设计\""
+        ],
+        "category": "announcements",
+        "link": "/undergrad?tab=projects",
+        "file": "experiences/announcements/undergrad-update-2025.md"
+      },
+      {
+        "title": "新成员欢迎指南",
+        "author": "711Club管理员",
+        "year": "2025届",
+        "date": "2025-11-01",
+        "excerpt": "欢迎加入711Club大家庭！为了帮助新成员快速融入社区，我们准备了这份详细的欢迎指南。",
+        "tags": [
+          "\"新成员\"",
+          "\"欢迎指南\"",
+          "\"社区介绍\""
+        ],
+        "category": "announcements",
+        "link": "",
+        "file": "experiences/announcements/new-member-welcome.md"
+      },
+      {
+        "title": "（占位用示例文章）2024秋季聚会活动",
         "author": "711Club管理员",
         "year": "2024届",
         "date": "2024-11-15",
@@ -110,23 +157,111 @@
           "\"技术交流\""
         ],
         "category": "announcements",
+        "link": "",
         "file": "experiences/announcements/2024-fall-meetup.md"
-      },
-      {
-        "title": "新成员欢迎指南",
-        "author": "711Club管理员",
-        "year": "2024届",
-        "date": "2024-11-01",
-        "excerpt": "欢迎加入711Club大家庭！为了帮助新成员快速融入社区，我们准备了这份详细的欢迎指南。",
-        "tags": [
-          "\"新成员\"",
-          "\"欢迎指南\"",
-          "\"社区介绍\""
-        ],
-        "category": "announcements",
-        "file": "experiences/announcements/new-member-welcome.md"
       }
     ]
   },
-  "lastUpdated": "2025-11-01T19:54:37.004Z"
+  "undergrad": {
+    "requirements": [
+      {
+        "title": "劳动教育",
+        "author": "711Club管理员",
+        "year": "2025",
+        "date": "2025-12-14",
+        "excerpt": "- 毕业要求：劳动教育学时 ≥ 26 学时。\n- 推荐构成：2 次普通生产劳动（8 学时）+ 1 次特色（4 学时）+ 1 次生活劳动（4 学时）+ 服务劳动/志愿时长折算 10 学时 = 26 学时。\n- 平台入口：劳动教育官网 ，宿舍属于生活劳动（宿管评分，无需选课）。\n- 企业/服务劳动：可将...",
+        "tags": [
+          "劳动教育",
+          "学时"
+        ],
+        "category": "毕业要求",
+        "file": "undergrad/requirements/labor-education.md"
+      },
+      {
+        "title": "社会实践",
+        "author": "711Club管理员",
+        "year": "2025",
+        "date": "2025-12-14",
+        "excerpt": "- 社会实践 ≥ 1 分 + 至少 1 次社会实践公开课。\n- 报名途径：寒暑假社会实践，关注第二课堂「校园活动-活动中心」报名参与（第二课堂官网）。\n- 单次实践不限于仅参加一个团队，可结合时间多队伍并行，但需按要求提交过程与总结材料。\n- 公开课按学校要求完成签到/打卡与作业。...",
+        "tags": [
+          "社会实践",
+          "第二课堂",
+          "公开课"
+        ],
+        "category": "毕业要求",
+        "file": "undergrad/requirements/social-practice.md"
+      },
+      {
+        "title": "人文素质讲座",
+        "author": "711Club管理员",
+        "year": "2025",
+        "date": "2025-12-14",
+        "excerpt": "- 毕业要求：人文讲座 ≥ 8 次 + 8 份听课记录表 + 2 篇读书报告。\n- 预约与签到：关注「东南大学文化素质教育中心」公众号，或数智东南-工作台-学业生活-素质讲座进行预约；按讲座要求完成签到签退。\n- 提交材料：大四下提交 8 份听课记录表与 2 篇读书笔记，保留签到截图与记录表。\n- ...",
+        "tags": [
+          "人文讲座",
+          "通识教育"
+        ],
+        "category": "毕业要求",
+        "file": "undergrad/requirements/humanities.md"
+      },
+      {
+        "title": "毕业设计",
+        "author": "711Club管理员",
+        "year": "2025",
+        "date": "2025-12-14",
+        "excerpt": "- 毕业设计视作毕业要求的一部分，请按学校节点完成课题申报、任务书、中期检查、论文定稿与答辩。\n- 详细时间轴与分类说明：前往 毕业设计时间轴 直接查看。\n- 建议做法：\n  - 申报阶段：与导师沟通题目可行性，确定企业/非企业类别；涉及合作单位时尽早确认审批流程。\n  - 任务书阶段：分解里程碑，...",
+        "tags": [
+          "毕业设计",
+          "进度",
+          "申报"
+        ],
+        "category": "毕业要求",
+        "file": "undergrad/requirements/graduation-project.md"
+      },
+      {
+        "title": "课程学分",
+        "author": "711Club管理员",
+        "year": "2025",
+        "date": "2025-12-14",
+        "excerpt": "- 课程均合格可获得毕业证；均绩（GPA）≥ 2.0 可获得学位证。\n- 建议定期核对培养计划与成绩单，确保必修/限选/任选学分均达标。\n- 如有挂科或学分缺口，尽早重修或补修，避免到毕业前集中补齐导致排考冲突。...",
+        "tags": [
+          "课程学分",
+          "均绩",
+          "毕业证",
+          "学位证"
+        ],
+        "category": "毕业要求",
+        "file": "undergrad/requirements/course-credit.md"
+      },
+      {
+        "title": "SRTP 分值",
+        "author": "711Club管理员",
+        "year": "2025",
+        "date": "2025-12-14",
+        "excerpt": "- 毕业要求：SRTP 学分 ≥ 2 分。\n- 认定来源：校级 SRTP、国创/省创、实验室导师项目；打竞赛（教务处竞赛列表可认定）；听 SRTP 讲座计分但总计不超过 0.8 分。\n- 材料清单：立项书/结题书、导师签字证明、成果（论文/专利/竞赛）截图或链接。\n- 建议流程：大二下/大三上启动项...",
+        "tags": [
+          "SRTP",
+          "科研实践",
+          "创新创业"
+        ],
+        "category": "毕业要求",
+        "file": "undergrad/requirements/srtp.md"
+      },
+      {
+        "title": "志愿时长",
+        "author": "711Club管理员",
+        "year": "2025",
+        "date": "2025-12-14",
+        "excerpt": "- 志愿服务时长 ≥ 12 小时。\n- 可关注计软智青协志愿者群或校青协志愿者群，参加各类志愿活动累计时长。\n- 保留签到、证明或平台记录，确保学籍系统能认定并计入总时长。...",
+        "tags": [
+          "志愿",
+          "时长",
+          "志工"
+        ],
+        "category": "毕业要求",
+        "file": "undergrad/requirements/volunteer-hours.md"
+      }
+    ]
+  },
+  "lastUpdated": "2025-12-14T02:36:43.687Z"
 }

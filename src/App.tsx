@@ -7,6 +7,7 @@ import About from './pages/About';
 import Experiences from './pages/Experiences';
 import Career from './pages/Career';
 import ContentViewer from './pages/ContentViewer';
+import Undergrad from './pages/Undergrad';
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/experiences" element={<Experiences />} />
             <Route path="/career" element={<Career />} />
+            <Route path="/undergrad" element={<Undergrad />} />
             <Route path="/content/:type/:filename" element={<ContentViewer />} />
+            <Route path="/content/:type/:category/:subcategory/:filename" element={<ContentViewer />} />
             <Route path="/content/:type/:category/:filename" element={<ContentViewer />} />
           </Routes>
         </main>

@@ -1,0 +1,218 @@
+{
+  "axis": [
+    { "id": "start-init", "date": "2025-11-06", "label": "毕设启动", "note": "发布毕设启动通知，明确流程与日程。", "link": "https://jwc.seu.edu.cn/2025/1028/c21681a543880/page.psp" },
+    { "id": "mentor-change", "date": "2025-11-17", "label": "导师变更截止", "note": "如需变更导师，提交《毕设导师变更申请表》。" },
+
+    { "id": "apply-forms", "date": "2025-12-15", "label": "课题申报/申请表截止", "note": "非企业毕设/外校毕设申请表，企业导师信息导入毕设系统。", "categories": ["保研本校", "保研外校本校挂名毕设", "保研外校实际外校毕设", "出国升学", "本科就业"] },
+    { "id": "taskbook", "date": "2025-12-30", "label": "任务书与翻译原文", "note": "导师填写任务书，提交外文翻译原文。", "categories": ["保研本校", "保研外校本校挂名毕设", "保研外校实际外校毕设", "出国升学", "本科就业"] },
+    { "id": "proposal", "date": "2026-01-25", "label": "开题报告/译文提交", "note": "提交开题报告及 ≥5000 字译文，导师审核。", "categories": ["保研本校", "保研外校本校挂名毕设", "保研外校实际外校毕设", "出国升学", "本科就业"] },
+
+    { "id": "apply-extend", "date": "2026-01-15", "label": "延长：申报/课题上报", "note": "考研/学分积欠延期课题申报与企业信息导入。", "categories": ["考研升学", "学分积欠"] },
+    { "id": "taskbook-extend", "date": "2026-01-20", "label": "延长：任务书与原文", "note": "延期同学任务书与翻译原文截止。", "categories": ["考研升学", "学分积欠"] },
+    { "id": "proposal-extend", "date": "2026-03-10", "label": "延长：开题报告/译文提交", "note": "延期同学最迟提交开题报告与译文。", "categories": ["考研升学", "学分积欠"] },
+
+    { "id": "defense-proposal", "date": "2026-03-10", "label": "开题答辩", "note": "专家不少于 3 人，线上线下均可，具体时间视老师分组而定。" },
+    { "id": "design-mid", "date": "2026-04-10", "label": "学生中期检查", "note": "提交中期考核表，导师审核。" },
+    { "id": "college-mid", "date": "2026-04-22", "label": "学院中期检查", "note": "重点检查任务书、开题、翻译、中期表，教务处抽查。" },
+    { "id": "acceptance", "date": "2026-05-20", "label": "软硬件验收", "note": "提交验收表。" },
+    { "id": "paper-submit", "date": "2026-05-25", "label": "论文提交/查重", "note": "维普和知网各 3 次检测机会。" },
+    { "id": "advisor-qual", "date": "2026-05-27", "label": "导师资格审查", "note": "导师审查答辩资格并填写论文创新点。" },
+    { "id": "blind-select", "date": "2026-06-04", "label": "盲审抽签送审", "note": "盲审通过方可答辩。" },
+    { "id": "blind-feedback", "date": "2026-06-12", "label": "盲审意见反馈", "note": "按意见修改论文。" },
+    { "id": "external-review", "date": "2026-06-14", "label": "非指导教师评阅", "note": "评阅教师给分并填创新点。" },
+    { "id": "defense", "date": "2026-06-15~06-18", "label": "毕业答辩（推优/二答）", "note": "一次答辩（校内/企业），二次答辩含推优。" },
+    { "id": "grade-entry", "date": "2026-06-22", "label": "成绩录入", "note": "各答辩组录入成绩，学院发布并确定推优名单。" },
+    { "id": "excellence", "date": "2026-06-23", "label": "推荐优秀毕设", "note": "提交校级优秀毕设名单，教务处审核。" },
+    { "id": "archive", "date": "2026-06-23~06-26", "label": "归档与总结", "note": "提交归档材料，秘书提交学院毕设总结报告。" }
+  ],
+  "intervals": [
+    { "id": "interval-start-mentor", "startId": "start-init", "endId": "mentor-change", "note": "启动与导师变更准备" },
+
+    { "id": "interval-mentor-apply", "startId": "mentor-change", "endId": "apply-forms", "note": "申报与企业信息阶段", "categories": ["保研本校", "保研外校本校挂名毕设", "保研外校实际外校毕设", "出国升学", "本科就业"] },
+    { "id": "interval-apply-taskbook", "startId": "apply-forms", "endId": "taskbook", "note": "导师上报课题/任务书准备", "categories": ["保研本校", "保研外校本校挂名毕设", "保研外校实际外校毕设", "出国升学", "本科就业"] },
+    { "id": "interval-taskbook-proposal", "startId": "taskbook", "endId": "proposal", "note": "开题材料撰写", "categories": ["保研本校", "保研外校本校挂名毕设", "保研外校实际外校毕设", "出国升学", "本科就业"] },
+    { "id": "interval-proposal-defenseprep", "startId": "proposal", "endId": "defense-proposal", "note": "开题答辩准备", "categories": ["保研本校", "保研外校本校挂名毕设", "保研外校实际外校毕设", "出国升学", "本科就业"] },
+    { "id": "interval-defenseproposal-mid", "startId": "defense-proposal", "endId": "design-mid", "note": "开题答辩后推进", "categories": ["保研本校", "保研外校本校挂名毕设", "保研外校实际外校毕设", "出国升学", "本科就业"] },
+    { "id": "interval-mid-college", "startId": "design-mid", "endId": "college-mid", "note": "中期到学院检查" },
+    { "id": "interval-college-acceptance", "startId": "college-mid", "endId": "acceptance", "note": "学院检查到验收" },
+    { "id": "interval-acceptance-paper", "startId": "acceptance", "endId": "paper-submit", "note": "验收到论文提交" },
+    { "id": "interval-paper-qual", "startId": "paper-submit", "endId": "advisor-qual", "note": "查重到资格审查" },
+    { "id": "interval-qual-blind", "startId": "advisor-qual", "endId": "blind-select", "note": "资格审查到盲审抽签" },
+    { "id": "interval-blind-feedback", "startId": "blind-select", "endId": "blind-feedback", "note": "盲审反馈" },
+    { "id": "interval-feedback-external", "startId": "blind-feedback", "endId": "external-review", "note": "反馈到评阅" },
+    { "id": "interval-external-defense", "startId": "external-review", "endId": "defense", "note": "评阅到答辩" },
+    { "id": "interval-defense-grade", "startId": "defense", "endId": "grade-entry", "note": "答辩到成绩" },
+    { "id": "interval-grade-excellence", "startId": "grade-entry", "endId": "excellence", "note": "成绩到推优" },
+    { "id": "interval-excellence-archive", "startId": "excellence", "endId": "archive", "note": "推优到归档" },
+
+    { "id": "interval-mentor-applyextend", "startId": "mentor-change", "endId": "apply-extend", "note": "延长申报阶段", "categories": ["考研升学", "学分积欠"] },
+    { "id": "interval-applyextend-taskextend", "startId": "apply-extend", "endId": "taskbook-extend", "note": "延期任务书准备", "categories": ["考研升学", "学分积欠"] },
+    { "id": "interval-taskextend-proposalextend", "startId": "taskbook-extend", "endId": "proposal-extend", "note": "延期开题材料撰写", "categories": ["考研升学", "学分积欠"] },
+    { "id": "interval-proposalextend-defenseprep", "startId": "proposal-extend", "endId": "defense-proposal", "note": "开题答辩准备（延期）", "categories": ["考研升学", "学分积欠"] },
+    { "id": "interval-defenseproposal-mid-delay", "startId": "defense-proposal", "endId": "design-mid", "note": "开题后推进（延期）", "categories": ["考研升学", "学分积欠"] },
+    { "id": "interval-proposalextend-mid", "startId": "proposal-extend", "endId": "design-mid", "note": "延期开题后持续推进", "categories": ["考研升学", "学分积欠"] }
+  ],
+  "categories": [
+    {
+      "name": "保研本校",
+      "nodes": [],
+      "ranges": [
+        { "intervalId": "interval-start-mentor", "detail": "阅读教务通知，如需变更导师，准备《毕设导师变更申请表》并及时找两位导师签字后交给教务老师，并填写《毕设指导老师信息登记》，与校内导师及时确认毕设内容。" },
+        { "intervalId": "interval-mentor-apply", "detail": "填写《非企业毕设申请表》，自己根据毕设内容填写《任务书》（任务书小概率导师自己写），让导师根据任务书内容填写《课题申报表》并进行申报（课题申报表大概率导师自己写）。" },
+        { "intervalId": "interval-apply-taskbook", "detail": "等待导师发布任务书和翻译原文。" },
+        { "intervalId": "interval-taskbook-proposal", "detail": "自己开始撰写《开题报告》和《翻译译文》。" },
+        { "intervalId": "interval-proposal-defenseprep", "detail": "准备《开题答辩 PPT》，完善报告与译文，演练答辩。" },
+        { "intervalId": "interval-defenseproposal-mid", "detail": "根据答辩反馈，推进核心功能/实验数据，整理阶段成果，撰写《中期考核表》。" },
+        { "intervalId": "interval-mid-college", "detail": "完善任务书、开题报告、外文翻译、中期考核表等材料，如需更改选题等内容需在中期前进行更改，中期后不再支持修改。" },
+        { "intervalId": "interval-college-acceptance", "detail": "继续推进核心功能/实验数据准备收尾，并准备《软硬件验收》材料，并着手开始撰写《毕设论文》。" },
+        { "intervalId": "interval-acceptance-paper", "detail": "撰写《毕设论文》。" },
+        { "intervalId": "interval-paper-qual", "detail": "查重并按要求修改，准备资格审查支撑材料。" },
+        { "intervalId": "interval-qual-blind", "detail": "确认盲审名单与送审材料，保持沟通。" },
+        { "intervalId": "interval-blind-feedback", "detail": "等待反馈意见。" },
+        { "intervalId": "interval-feedback-external", "detail": "根据盲审意见修改《毕设论文》。" },
+        { "intervalId": "interval-external-defense", "detail": "准备《答辩PPT》与演示，完成盲审/评阅修订。" },
+        { "intervalId": "interval-defense-grade", "detail": "答辩完成，等待答辩结果。" },
+        { "intervalId": "interval-grade-excellence", "detail": "等待结果。" },
+        { "intervalId": "interval-excellence-archive", "detail": "完成《归档材料》和《总结报告》；推优后归档。" }
+      ]
+    },
+    {
+      "name": "保研外校本校挂名毕设",
+      "nodes": [],
+      "ranges": [
+        { "intervalId": "interval-start-mentor", "detail": "阅读校内外通知，如需调整校内导师，准备《毕设导师变更申请表》并及时找两位导师签字后交给教务老师，与校内导师及时确认并填写《毕设指导老师信息登记》，与校外导师及时确认毕设内容。" },
+        { "intervalId": "interval-mentor-apply", "detail": "填写《非企业毕设申请表》，自己根据毕设内容填写《任务书》（任务书小概率导师自己写），外校导师审核确认，发送至本校导师，从而让 TA 根据任务书内容填写《课题申报表》并进行申报（课题申报表大概率导师自己写）。" },
+        { "intervalId": "interval-apply-taskbook", "detail": "等待导师发布任务书和翻译原文。" },
+        { "intervalId": "interval-taskbook-proposal", "detail": "自己开始撰写《开题报告》和《翻译译文》，兼顾外校要求。" },
+        { "intervalId": "interval-proposal-defenseprep", "detail": "准备《开题答辩 PPT》，完善报告与译文，演练答辩。" },
+        { "intervalId": "interval-defenseproposal-mid", "detail": "根据答辩反馈，推进核心功能/实验数据，整理阶段成果，撰写《中期考核表》，和外校导师保持沟通。" },
+        { "intervalId": "interval-mid-college", "detail": "完善任务书、开题报告、外文翻译、中期考核表等材料，如需更改选题等内容需在中期前进行更改，中期后不再支持修改。" },
+        { "intervalId": "interval-college-acceptance", "detail": "继续推进核心功能/实验数据准备收尾，并准备《软硬件验收》材料，并着手开始撰写《毕设论文》。" },
+        { "intervalId": "interval-acceptance-paper", "detail": "撰写《毕设论文》。" },
+        { "intervalId": "interval-paper-qual", "detail": "查重并按要求修改，准备资格审查支撑材料。" },
+        { "intervalId": "interval-qual-blind", "detail": "确认盲审名单与送审材料，保持沟通。" },
+        { "intervalId": "interval-blind-feedback", "detail": "等待反馈意见。" },
+        { "intervalId": "interval-feedback-external", "detail": "根据盲审意见修改《毕设论文》。" },
+        { "intervalId": "interval-external-defense", "detail": "准备《答辩PPT》与演示，完成盲审/评阅修订。" },
+        { "intervalId": "interval-defense-grade", "detail": "答辩完成，等待答辩结果。" },
+        { "intervalId": "interval-grade-excellence", "detail": "等待结果。" },
+        { "intervalId": "interval-excellence-archive", "detail": "完成《归档材料》和《总结报告》；推优后归档。" }
+      ]
+    },
+    {
+      "name": "保研外校实际外校毕设",
+      "nodes": [],
+      "ranges": [
+        { "intervalId": "interval-start-mentor", "detail": "对齐外校要求，规划双线时间表；如需调整校内导师，准备《毕设导师变更申请表》并及时找两位导师签字后交给教务老师，与校内导师及时确认并填写《毕设指导老师信息登记》，与校外导师及时确认毕设内容。" },
+        { "intervalId": "interval-mentor-apply", "detail": "填写《非企业毕设申请表》、《校外登记表》、《接收函（签字盖章）》，自己根据毕设内容填写《任务书》（任务书小概率导师自己写），外校导师审核确认，发送至本校导师，从而让 TA 根据任务书内容填写《课题申报表》并进行申报（课题申报表大概率导师自己写）。" },
+        { "intervalId": "interval-apply-taskbook", "detail": "等待导师发布任务书和翻译原文。" },
+        { "intervalId": "interval-taskbook-proposal", "detail": "撰写《开题报告》和《翻译译文》，兼顾外校要求。" },
+        { "intervalId": "interval-proposal-defenseprep", "detail": "准备《开题答辩 PPT》，完善报告与译文，演练答辩。" },
+        { "intervalId": "interval-defenseproposal-mid", "detail": "根据答辩反馈，推进核心功能/实验数据，整理阶段成果，撰写《中期考核表》，和外校导师保持沟通。" },
+        { "intervalId": "interval-mid-college", "detail": "完善任务书、开题报告、外文翻译、中期考核表等材料，如需更改选题等内容需在中期前进行更改，中期后不再支持修改。" },
+        { "intervalId": "interval-college-acceptance", "detail": "继续推进核心功能/实验数据准备收尾，并准备《软硬件验收》材料，并着手开始撰写《毕设论文》。" },
+        { "intervalId": "interval-acceptance-paper", "detail": "撰写《毕设论文》。" },
+        { "intervalId": "interval-paper-qual", "detail": "查重并按要求修改，准备资格审查支撑材料。" },
+        { "intervalId": "interval-qual-blind", "detail": "确认盲审名单与送审材料，保持沟通。" },
+        { "intervalId": "interval-blind-feedback", "detail": "等待反馈意见。" },
+        { "intervalId": "interval-feedback-external", "detail": "根据盲审意见修改《毕设论文》。" },
+        { "intervalId": "interval-external-defense", "detail": "准备《答辩PPT》与演示，完成盲审/评阅修订。" },
+        { "intervalId": "interval-defense-grade", "detail": "答辩完成，等待答辩结果。" },
+        { "intervalId": "interval-grade-excellence", "detail": "等待结果。" },
+        { "intervalId": "interval-excellence-archive", "detail": "完成《归档材料》和《总结报告》，推优后归档。" }
+      ]
+    },
+    {
+      "name": "考研升学",
+      "nodes": [],
+      "ranges": [
+        { "intervalId": "interval-start-mentor", "detail": "预留初试冲刺时间，列出关键节点；如需变更导师，准备《毕设导师变更申请表》并及时找两位导师签字后交给教务老师，与校内导师及时确认并填写《毕设指导老师信息登记》，并沟通缓冲。" },
+        { "intervalId": "interval-mentor-applyextend", "detail": "考研结束后，寻找实习企业，在 1.15 前提交申报与企业信息，及时与导师确认。" },
+        { "intervalId": "interval-applyextend-taskextend", "detail": "根据实习企业要求撰写《任务书》。" },
+        { "intervalId": "interval-taskextend-proposalextend", "detail": "利用 1.20 任务书与原文截止、3.10 开题截止的缓冲，尽快补齐材料。" },
+        { "intervalId": "interval-proposalextend-defenseprep", "detail": "准备《开题答辩》和《翻译译文》，兼顾复试/调剂节奏。" },
+        { "intervalId": "interval-defenseproposal-mid-delay", "detail": "推进核心功能/实验，记录阶段成果；避免与复试冲突。" },
+        { "intervalId": "interval-mid-college", "detail": "完善任务书、开题报告、外文翻译、中期考核表等材料，如需更改选题等内容需在中期前进行更改，中期后不再支持修改。" },
+        { "intervalId": "interval-college-acceptance", "detail": "企业毕设需提交企业导师签字盖章的验收表，准备《软硬件验收》材料，并着手开始撰写《毕设论文》。" },
+        { "intervalId": "interval-acceptance-paper", "detail": "撰写《毕设论文》。" },
+        { "intervalId": "interval-paper-qual", "detail": "查重并按要求修改，准备资格审查支撑材料。" },
+        { "intervalId": "interval-qual-blind", "detail": "确认盲审名单与送审材料，保持沟通。" },
+        { "intervalId": "interval-blind-feedback", "detail": "等待反馈意见。" },
+        { "intervalId": "interval-feedback-external", "detail": "根据盲审意见修改《毕设论文》。" },
+        { "intervalId": "interval-external-defense", "detail": "准备《答辩PPT》与演示，完成盲审/评阅修订；避开复试/调剂。" },
+        { "intervalId": "interval-defense-grade", "detail": "答辩完成，等待答辩结果。" },
+        { "intervalId": "interval-grade-excellence", "detail": "等待结果。" },
+        { "intervalId": "interval-excellence-archive", "detail": "完成《归档材料》和《总结报告》；确认毕业资格。" }
+      ]
+    },
+    {
+      "name": "出国升学",
+      "nodes": [],
+      "ranges": [
+        { "intervalId": "interval-start-mentor", "detail": "同步境内外节奏，梳理境外导师/项目需求；如需变更导师，准备《毕设导师变更申请表》并及时找两位导师签字后交给教务老师，与校内导师及时确认并填写《毕设指导老师信息登记》。" },
+        { "intervalId": "interval-mentor-apply", "detail": "填写《非企业毕设申请表》，自己根据毕设内容填写《任务书》（任务书小概率导师自己写），外校导师审核确认，发送至本校导师，从而让 TA 根据任务书内容填写《课题申报表》并进行申报（课题申报表大概率导师自己写）。" },
+        { "intervalId": "interval-apply-taskbook", "detail": "等待导师发布任务书和翻译原文。" },
+        { "intervalId": "interval-taskbook-proposal", "detail": "撰写《开题报告》和《翻译译文》，保留英文/境外版本素材。" },
+        { "intervalId": "interval-proposal-defenseprep", "detail": "准备《开题答辩 PPT》，完善报告与译文，演练答辩,兼顾境外申请/签证时间。" },
+        { "intervalId": "interval-defenseproposal-mid", "detail": "根据答辩反馈，推进核心功能/实验数据，整理阶段成果，撰写《中期考核表》，和外校导师保持沟通。" },
+        { "intervalId": "interval-mid-college", "detail": "完善任务书、开题报告、外文翻译、中期考核表等材料，如需更改选题等内容需在中期前进行更改，中期后不再支持修改。" },
+        { "intervalId": "interval-college-acceptance", "detail": "继续推进核心功能/实验数据准备收尾，并准备《软硬件验收》材料，并着手开始撰写《毕设论文》。" },
+        { "intervalId": "interval-acceptance-paper", "detail": "撰写《毕设论文》。" },
+        { "intervalId": "interval-paper-qual", "detail": "查重并按要求修改，准备资格审查支撑材料。" },
+        { "intervalId": "interval-qual-blind", "detail": "确认盲审名单与送审材料，保持沟通。" },
+        { "intervalId": "interval-blind-feedback", "detail": "等待反馈意见。" },
+        { "intervalId": "interval-feedback-external", "detail": "根据盲审意见修改《毕设论文》。" },
+        { "intervalId": "interval-external-defense", "detail": "准备《答辩PPT》与演示，完成盲审/评阅修订。" },
+        { "intervalId": "interval-defense-grade", "detail": "答辩完成，等待答辩结果。" },
+        { "intervalId": "interval-grade-excellence", "detail": "等待结果。" },
+        { "intervalId": "interval-excellence-archive", "detail": "完成《归档材料》和《总结报告》；推优后归档。" }
+      ]
+    },
+    {
+      "name": "本科就业",
+      "nodes": [],
+      "ranges": [
+        { "intervalId": "interval-start-mentor", "detail": "结合秋招/实习安排毕设时间表；如需变更导师，准备《毕设导师变更申请表》并及时找两位导师签字后交给教务老师，与校内导师及时确认并填写《毕设指导老师信息登记》。" },
+        { "intervalId": "interval-mentor-apply", "detail": "填写《非企业毕设申请表》，自己根据毕设内容填写《任务书》（任务书小概率导师自己写），外校导师审核确认，发送至本校导师，从而让 TA 根据任务书内容填写《课题申报表》并进行申报（课题申报表大概率导师自己写）。" },
+        { "intervalId": "interval-apply-taskbook", "detail": "等待导师发布任务书和翻译原文。" },
+        { "intervalId": "interval-taskbook-proposal", "detail": "撰写《开题报告》和《翻译译文》，突出业务场景与工程目标。" },
+        { "intervalId": "interval-proposal-defenseprep", "detail": "准备《开题答辩》，突出工程落地与可交付。" },
+        { "intervalId": "interval-defenseproposal-mid", "detail": "根据答辩反馈，推进核心功能/实验数据，整理阶段成果，撰写《中期考核表》，和外校导师保持沟通。" },
+        { "intervalId": "interval-mid-college", "detail": "完善任务书、开题报告、外文翻译、中期考核表等材料，如需更改选题等内容需在中期前进行更改，中期后不再支持修改。" },
+        { "intervalId": "interval-college-acceptance", "detail": "企业毕设需提交企业导师签字盖章的验收表，并准备《软硬件验收》材料，并着手开始撰写《毕设论文》。" },
+        { "intervalId": "interval-acceptance-paper", "detail": "撰写《毕设论文》。" },
+        { "intervalId": "interval-paper-qual", "detail": "查重并按要求修改，准备资格审查支撑材料。" },
+        { "intervalId": "interval-qual-blind", "detail": "确认盲审名单与送审材料，保持沟通。" },
+        { "intervalId": "interval-blind-feedback", "detail": "等待反馈意见。" },
+        { "intervalId": "interval-feedback-external", "detail": "根据盲审意见修改《毕设论文》。" },
+        { "intervalId": "interval-external-defense", "detail": "准备《答辩PPT》与演示，完成盲审/评阅修订。" },
+        { "intervalId": "interval-defense-grade", "detail": "答辩完成，等待答辩结果。" },
+        { "intervalId": "interval-grade-excellence", "detail": "等待结果。" },
+        { "intervalId": "interval-excellence-archive", "detail": "完成《归档材料》和《总结报告》；推优后归档。" }
+      ]
+    },
+    {
+      "name": "学分积欠",
+      "nodes": [],
+      "ranges": [
+        { "intervalId": "interval-start-mentor", "detail": "梳理补修与毕设并行计划，标注可用延长期；如需变更导师，准备《毕设导师变更申请表》并及时找两位导师签字后交给教务老师，与校内导师及时确认并填写《毕设指导老师信息登记》。" },
+        { "intervalId": "interval-mentor-applyextend", "detail": "利用 1.15 延长期完成申报与企业信息，提前沟通补修课程与毕设冲突。" },
+        { "intervalId": "interval-applyextend-taskextend", "detail": "根据实习企业要求撰写《任务书》与翻译原文。" },
+        { "intervalId": "interval-taskextend-proposalextend", "detail": "完成《开题报告》和《翻译译文》；兼顾补修考试。" },
+        { "intervalId": "interval-proposalextend-defenseprep", "detail": "准备《开题答辩》，并行处理补修/复习。" },
+        { "intervalId": "interval-defenseproposal-mid-delay", "detail": "根据答辩反馈，推进核心功能/实验数据，整理阶段成果，撰写《中期考核表》，避免与补考冲突。" },
+        { "intervalId": "interval-mid-college", "detail": "完善任务书、开题报告、外文翻译、中期考核表等材料，如需更改选题等内容需在中期前进行更改，中期后不再支持修改。" },
+        { "intervalId": "interval-college-acceptance", "detail": "企业毕设需提交企业导师签字盖章的验收表，并准备《软硬件验收》材料，并着手开始撰写《毕设论文》。" },
+        { "intervalId": "interval-acceptance-paper", "detail": "撰写《毕设论文》；预留补修考试缓冲。" },
+        { "intervalId": "interval-paper-qual", "detail": "查重并按要求修改，准备资格审查支撑材料。" },
+        { "intervalId": "interval-qual-blind", "detail": "确认盲审名单与送审材料，保持沟通。" },
+        { "intervalId": "interval-blind-feedback", "detail": "等待反馈意见。" },
+        { "intervalId": "interval-feedback-external", "detail": "根据盲审意见修改《毕设论文》。" },
+        { "intervalId": "interval-external-defense", "detail": "准备《答辩PPT》与演示，完成盲审/评阅修订；避开补考。" },
+        { "intervalId": "interval-defense-grade", "detail": "答辩完成，等待答辩结果。" },
+        { "intervalId": "interval-grade-excellence", "detail": "等待结果。" },
+        { "intervalId": "interval-excellence-archive", "detail": "完成《归档材料》和《总结报告》；确认毕业资格。" }
+      ]
+    }
+  ]
+}
