@@ -38,12 +38,12 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({
           ),
           // 自定义列表样式
           ul: ({ children }) => (
-            <ul className="list-disc list-inside space-y-2 mb-4 text-body text-neutral-700">
+            <ul className="mb-4 list-disc list-outside pl-6 space-y-2 text-body text-neutral-700 [&_ul]:mt-2 [&_ul]:mb-0 [&_ul]:pl-6 [&_ul]:list-[circle] [&_ul_ul]:list-[square] [&_ol]:mt-2 [&_ol]:mb-0 [&_ol]:pl-6">
               {children}
             </ul>
           ),
           ol: ({ children }) => (
-            <ol className="list-decimal list-inside space-y-2 mb-4 text-body text-neutral-700">
+            <ol className="mb-4 list-decimal list-outside pl-6 space-y-2 text-body text-neutral-700 [&_ol]:mt-2 [&_ol]:mb-0 [&_ol]:pl-6 [&_ul]:mt-2 [&_ul]:mb-0 [&_ul]:pl-6">
               {children}
             </ol>
           ),

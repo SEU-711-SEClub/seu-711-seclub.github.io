@@ -54,15 +54,17 @@ export interface UndergradSummary {
 
 export interface UndergradTimeline {
   axis: {
-    categories: any;
+    categories?: string[];
     id: string;
     date: string;
     label: string;
     note?: string;
     link?: string;
+    image?: { src: string; alt: string; scale?: number } | { src: string; alt: string; scale?: number }[];
+    images?: { src: string; alt: string; scale?: number }[];
   }[];
   intervals?: {
-    categories: any;
+    categories?: string[];
     id: string;
     startId: string;
     endId: string;
