@@ -20,6 +20,10 @@
 **/.eggs/
 **/lib/
 **/lib64/
+# NOTE: This repo uses `src/lib/` for source utilities (TypeScript/React).
+# Keep Python virtualenv/build `lib/` ignored, but do NOT ignore `src/lib/`.
+!src/lib/
+!src/lib/**
 **/parts/
 **/sdist/
 **/var/
