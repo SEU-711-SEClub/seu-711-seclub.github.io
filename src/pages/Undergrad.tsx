@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Info, ClipboardList, Timer, ArrowRight, Target, ChevronRight, ZoomIn, X } from 'lucide-react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Info, ClipboardList, Timer, ArrowRight, Target, ChevronRight, ZoomIn, X, Sparkles } from 'lucide-react';
 import {
   useContentIndex,
   useUndergradSummary,
@@ -8,8 +8,9 @@ import {
 } from '../hooks/useContent';
 import useScrollToTop from '../hooks/useScrollToTop';
 import { RichText } from '../lib/richText';
+import UndergradToolsPanel from '../components/UndergradTools/UndergradToolsPanel';
 
-type TabKey = 'requirements' | 'projects';
+type TabKey = 'requirements' | 'projects' | 'tools';
 
 type TimelineImage = {
   src: string;
@@ -75,11 +76,13 @@ const ScaledImage = ({
   className = '',
   thumbnailMaxWidth = 200,
   thumbnailMaxHeight = 120,
+  onNaturalSize,
 }: {
   image: TimelineImage;
   className?: string;
   thumbnailMaxWidth?: number;
   thumbnailMaxHeight?: number;
+  onNaturalSize?: (src: string, width: number, height: number) => void;
 }) => {
   const [naturalSize, setNaturalSize] = useState<{ width: number; height: number } | null>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -87,7 +90,7 @@ const ScaledImage = ({
 
   const thumbnailStyle = useMemo(() => {
     const base: React.CSSProperties = {
-      maxWidth: thumbnailMaxWidth,
+      maxWidth: '100%',
       maxHeight: thumbnailMaxHeight,
     };
 
@@ -144,9 +147,12 @@ const ScaledImage = ({
             if (width && height && (naturalSize?.width !== width || naturalSize?.height !== height)) {
               setNaturalSize({ width, height });
             }
+            if (width && height) {
+              onNaturalSize?.(image.src, width, height);
+            }
           }}
           style={thumbnailStyle}
-          className="block h-auto w-auto max-w-full rounded border border-neutral-200 bg-white shadow-sm cursor-zoom-in"
+          className="block mx-auto h-auto w-auto max-w-full rounded border border-neutral-200 bg-white shadow-sm cursor-zoom-in"
         />
         <span className="pointer-events-none absolute inset-0 rounded bg-neutral-950/0 transition-colors group-hover:bg-neutral-950/5" />
         <span className="pointer-events-none absolute bottom-2 right-2 inline-flex items-center gap-1 rounded bg-white/90 px-2 py-1 text-[10px] font-medium text-neutral-700 opacity-0 shadow-sm transition-opacity group-hover:opacity-100">
@@ -187,24 +193,101 @@ const ScaledImage = ({
   );
 };
 
-const TimelineImageRow = ({ images }: { images: TimelineImage[] }) => (
-  <div className="flex items-start justify-end gap-2 overflow-x-auto pb-1 [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [-ms-overflow-style:none]">
-    {images.map((image, index) => (
-      <ScaledImage
-        key={`${image.src}-${index}`}
-        image={image}
-        className="flex-shrink-0"
-        thumbnailMaxWidth={160}
-        thumbnailMaxHeight={110}
-      />
-    ))}
-  </div>
-);
+type TimelineImageSize = { width: number; height: number };
+
+const TimelineImageRow = ({ images }: { images: TimelineImage[] }) => {
+  const [sizes, setSizes] = useState<Record<string, TimelineImageSize>>({});
+
+  const handleNaturalSize = useCallback((src: string, width: number, height: number) => {
+    setSizes(prev => {
+      const current = prev[src];
+      if (current && current.width === width && current.height === height) return prev;
+      return { ...prev, [src]: { width, height } };
+    });
+  }, []);
+
+  const ratios = useMemo(
+    () =>
+      images.map((image, index) => {
+        const size = sizes[image.src];
+        const ratio = size ? size.height / size.width : 0;
+        return { image, index, ratio };
+      }),
+    [images, sizes]
+  );
+
+  if (images.length === 2) {
+    return (
+      <div className="grid grid-cols-2 gap-1.5 items-start">
+        {images.map((image, index) => (
+          <ScaledImage
+            key={`${image.src}-${index}`}
+            image={image}
+            className="w-full"
+            thumbnailMaxWidth={240}
+            thumbnailMaxHeight={90}
+            onNaturalSize={handleNaturalSize}
+          />
+        ))}
+      </div>
+    );
+  }
+
+  if (images.length >= 3) {
+    const primary = [...ratios].sort((a, b) => b.ratio - a.ratio || a.index - b.index)[0]?.image;
+    const secondary = primary ? images.filter(image => image.src !== primary.src) : images.slice(1);
+
+    return (
+      <div className="grid grid-cols-2 gap-1.5 items-start">
+        {primary && (
+          <ScaledImage
+            key={primary.src}
+            image={primary}
+            className="w-full"
+            thumbnailMaxWidth={240}
+            thumbnailMaxHeight={110}
+            onNaturalSize={handleNaturalSize}
+          />
+        )}
+        <div className="grid grid-cols-1 gap-1.5">
+          {secondary.map((image, index) => (
+            <ScaledImage
+              key={`${image.src}-${index}`}
+              image={image}
+              className="w-full"
+              thumbnailMaxWidth={240}
+              thumbnailMaxHeight={110}
+              onNaturalSize={handleNaturalSize}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  const maxHeight = 90;
+
+  return (
+    <div className="grid grid-cols-1 gap-1.5">
+      {images.map((image, index) => (
+        <ScaledImage
+          key={`${image.src}-${index}`}
+          image={image}
+          className="w-full"
+          thumbnailMaxWidth={240}
+          thumbnailMaxHeight={maxHeight}
+          onNaturalSize={handleNaturalSize}
+        />
+      ))}
+    </div>
+  );
+};
 
 const Undergrad = () => {
   useScrollToTop();
   const [activeTab, setActiveTab] = useState<TabKey>('requirements');
   const location = useLocation();
+  const navigate = useNavigate();
   const { index, loading: indexLoading, error: indexError } = useContentIndex();
   const {
     data: summary,
@@ -227,10 +310,17 @@ const Undergrad = () => {
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const tab = params.get('tab');
-    if (tab === 'projects' || tab === 'requirements') {
+    if (tab === 'projects' || tab === 'requirements' || tab === 'tools') {
       setActiveTab(tab as TabKey);
     }
   }, [location.search]);
+
+  const handleTabChange = (nextTab: TabKey) => {
+    setActiveTab(nextTab);
+    const params = new URLSearchParams(location.search);
+    params.set('tab', nextTab);
+    navigate({ search: `?${params.toString()}` }, { replace: true });
+  };
 
   const requirements = index?.undergrad?.requirements || [];
 
@@ -463,8 +553,13 @@ const Undergrad = () => {
 
                     if (axisImages.length === 0) return null;
 
+                    const imageWrapperClassName =
+                      axisImages.length <= 1
+                        ? 'ml-auto self-start w-[120px] sm:w-[160px] md:w-[200px]'
+                        : 'ml-auto self-start w-[140px] sm:w-[180px] md:w-[220px]';
+
                     return (
-                      <div className="ml-auto self-start w-[160px] sm:w-[200px] md:w-[240px]">
+                      <div className={imageWrapperClassName}>
                         <TimelineImageRow images={axisImages} />
                       </div>
                     );
@@ -576,11 +671,11 @@ const Undergrad = () => {
         <header className="mb-10 text-center">
           <p className="inline-flex items-center rounded-full bg-primary-50 px-4 py-2 text-caption text-primary-700 font-semibold">
             <Info size={14} className="mr-2" />
-            本科培养 · 毕业要求 & 毕业设计
+            本科培养 · 毕业要求 & 毕业设计 & 提效工具
           </p>
           <h1 className="text-h1 font-bold text-primary-900 mt-4 mb-3">本科培养导航</h1>
           <p className="text-body-lg text-neutral-700 max-w-3xl mx-auto">
-            可视化查看毕业要求达成情况，按分类切换毕业设计时间轴。
+            可视化查看毕业要求达成情况，按分类切换毕业设计时间轴，并按课程场景筛选提效工具。
           </p>
         </header>
 
@@ -588,12 +683,13 @@ const Undergrad = () => {
           {[
             { key: 'requirements', label: '毕业要求概览', icon: ClipboardList },
             { key: 'projects', label: '毕业设计时间轴', icon: Target },
+            { key: 'tools', label: '提效工具库', icon: Sparkles },
           ].map(tab => {
             const Icon = tab.icon;
             return (
               <button
                 key={tab.key}
-                onClick={() => setActiveTab(tab.key as TabKey)}
+                onClick={() => handleTabChange(tab.key as TabKey)}
                 className={`inline-flex items-center gap-2 rounded-lg px-5 py-3 text-body font-semibold transition-all ${
                   activeTab === tab.key
                     ? 'bg-primary-500 text-white shadow-sm'
@@ -608,7 +704,13 @@ const Undergrad = () => {
         </div>
 
         <section className="mb-10">
-          {activeTab === 'requirements' ? renderRequirements() : renderTimeline()}
+          {activeTab === 'requirements' ? (
+            renderRequirements()
+          ) : activeTab === 'projects' ? (
+            renderTimeline()
+          ) : (
+            <UndergradToolsPanel />
+          )}
         </section>
       </div>
     </div>
