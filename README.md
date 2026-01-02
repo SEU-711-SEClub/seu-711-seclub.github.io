@@ -3,7 +3,8 @@
 一个温暖专业的软件学院交流社区官网，支持动态内容管理，便于维护更新。
 
 ## 🔥最近更新
-- 2025-12-20：🚀完善本科培养专区：毕业要求按“毕业要求/达成途径”分段展示；毕业设计时间轴支持 RichText 颜色标注等格式、右侧多图缩略与点击放大预览；优化 Markdown 嵌套列表层级显示。
+- 2026-01-01：🚀新增本科培养「提效工具库」：按分类整理工具，支持搜索、含 AI 用法、课程标签/平台/费用/分类筛选；优化毕业设计时间轴右侧图片布局：多图缩略自动排版，整体更紧凑并尽量与文本高度对齐。
+- 2025-12-20：✨完善本科培养专区：毕业要求按“毕业要求/达成途径”分段展示；毕业设计时间轴支持 RichText 颜色标注等格式、右侧多图缩略与点击放大预览；优化 Markdown 嵌套列表层级显示。
 - 2025-12-14：✨更新本科毕业要求与毕业设计时间轴文档，补充更新 README 维护说明。
 - 2025-11-09：✨内容中心新增标签引导信息块（含图标/配图提示）；更新 README 与内容管理指南，补充分类引导与目录结构；调整求职分类提示，指向社团招聘/交流信息。
 - 2025-11-02：✨官网建立。
@@ -13,7 +14,7 @@
 ### 核心功能
 - **8个完整页面**：首页、关于我们、交流社区、经验分享、生涯规划、活动中心、加入我们、成员专区
 - **分类引导区**：内容中心按标签展示对应的引导提示、关键要点与配图，快速了解不同成长路径
-- **本科培养专区**：本科毕业要求概览与毕业设计时间轴，支持分类切换、阶段任务与资料链接
+- **本科培养专区**：毕业要求概览、毕业设计时间轴、提效工具库（搜索/含 AI 用法/课程标签/平台/费用/分类筛选）
 - **动态内容系统**：真正的Markdown文件读取和管理
 - **响应式设计**：桌面3-4列，平板2列，移动单列完美适配
 - **毛玻璃效果**：活动中心和交流社区的科技感界面
@@ -66,27 +67,32 @@ pnpm run build:content
 │  ├── components/          # 可复用组件
 │  │  ├── Navbar.tsx        # 导航栏
 │  │  ├── Footer.tsx        # 页脚
-│  │  └── MarkdownRenderer.tsx  # Markdown渲染器
+│  │  ├── MarkdownRenderer.tsx  # Markdown渲染器
+│  │  └── UndergradTools/    # 本科培养 · 提效工具库
+│  │      ├── UndergradToolsPanel.tsx  # 工具库页面面板
+│  │      ├── ToolsFilters.tsx         # 筛选区（搜索/课程标签/平台/费用/分类）
+│  │      └── ToolCard.tsx             # 工具卡片（优缺点/AI 用法/替代方案）
 │  ├── hooks/               # 自定义Hooks
-│  │  └── useContent.ts     # 内容管理Hook
+│  │  ├── useContent.ts     # 内容管理Hook（含本科培养数据）
+│  │  └── useUndergradTools.ts  # 提效工具库数据加载
 │  ├── lib/                 # 通用工具/富文本渲染
 │  │  ├── utils.ts          # 工具函数
-│  │  └── richText.tsx      # RichText 渲染（颜色/强调）
+│  │  ├── richText.tsx      # RichText 渲染（颜色/强调）
+│  │  └── undergradTools.ts # 提效工具库：筛选/选项构建等纯逻辑
 │  ├── pages/               # 页面组件
 │  │  ├── Home.tsx          # 首页
 │  │  ├── About.tsx         # 关于我们
 │  │  ├── Community.tsx     # 交流社区
 │  │  ├── Experiences.tsx   # 经验分享/内容中心
 │  │  ├── Career.tsx        # 生涯规划
-│  │  ├── Activities.tsx    # 活动中心
-│  │  ├── Undergrad.tsx     # 本科培养（毕业要求/毕业设计）
+│  │  ├── Undergrad.tsx     # 本科培养（毕业要求/毕业设计/提效工具库）
 │  │  ├── Join.tsx          # 加入我们
 │  │  └── Member.tsx        # 成员专区
 │  └── App.tsx              # 应用入口
 ├── public/
 │  ├── content/             # 动态内容文件夹
-│  │  ├── announcements/    # 活动公告
-│  │  ├── experiences/      # 经验分享分类
+│  │  ├── experiences/      # 经验分享分类（含活动公告）
+│  │  │  ├── announcements/ # 活动公告
 │  │  │  ├── 保研/
 │  │  │  ├── 就业/
 │  │  │  ├── 留学/
@@ -97,10 +103,12 @@ pnpm run build:content
 │  │  │  ├── requirements/
 │  │  │  │  ├── summary.json      # 毕业要求索引
 │  │  │  │  └── *.md              # 毕业要求详情
-│  │  │  └── projects/
-│  │  │      ├── timeline.json    # 毕业设计时间轴
-│  │  │      └── images/          # 时间轴配图（支持放大查看）
-│  │  │          └── *.png
+│  │  │  ├── projects/
+│  │  │  │  ├── timeline.json    # 毕业设计时间轴
+│  │  │  │  └── images/          # 时间轴配图（支持放大查看）
+│  │  │  │      └── *.png
+│  │  │  └── tools/
+│  │  │      └── tools.json       # 提效工具库数据（分类/工具/使用提示）
 │  │  └── index.json        # 内容索引（自动生成）
 │  ├── images/              # 公共图片资源（例如分类引导配图）
 │  │  └── college-path-roadmap.png  # 保研、考研、留学、就业时间规划示意图
@@ -171,12 +179,22 @@ excerpt: "文章摘要"
   - 节点/区间可通过 `categories` 指定可见分类（延期节点仅在考研升学/学分积欠可见，正常节点仅在其他分类可见）。
   - 两时间点之间的任务写在对应分类的 `ranges`（按 `intervalId` 关联）中：`detail`/`links`/`image`。
   - 文本支持 `\n` 换行与 RichText 标注（例如 `{{blue:...}}`、`{{red:...}}`），样式统一在 `src/lib/richText.tsx`。
-  - 右侧配图支持 `axis.images`（推荐）或 `axis.image`（兼容对象/数组）；图片放在 `public/content/undergrad/projects/images/`，引用路径使用 `/content/undergrad/projects/images/...`，缩略图靠右顶部对齐并可点击放大预览。
+  - 右侧配图支持 `axis.images`（推荐）或 `axis.image`（兼容对象/数组）；图片放在 `public/content/undergrad/projects/images/`，引用路径使用 `/content/undergrad/projects/images/...`；缩略图区域靠右顶部对齐，多图会自动排版（2 张并排/3+ 主图+侧栏堆叠）并可点击放大预览。
   - 时间轴上方“规则说明”区域在 `src/pages/Undergrad.tsx` 中维护（全局共享，不随分类切换）。
 - 维护流程：
   1) 编辑上述 JSON/Markdown。
   2) 运行 `npm run build:content` 生成最新索引。
   3) 如需跳转到时间轴，可在文档中使用 `/undergrad?tab=projects` 链接。
+
+### 本科提效工具库（Undergrad Tools）
+
+- 页面：`/undergrad?tab=tools`（提效工具库），支持搜索、含 AI 用法、课程标签/平台/费用/分类筛选。
+- 数据文件：`public/content/undergrad/tools/tools.json`（直接被前端 fetch，不依赖 `public/content/index.json` 内容索引）。
+- `tools.json` 字段：
+  - 顶层：`updatedAt`、`intro`、`cautions`（支持 Markdown 超链接：`[标题](https://...)`）、`categories`。
+  - 分类：`key`、`name`、`description?`、`courseTags?`、`tools`。
+  - 工具：`id`、`name`、`subtitle?`、`description`、`links`、`platforms?`、`pricing?`、`useCases?`、`courseTags?`、`pros`、`cons`、`ai?.highlights?`、`alternatives?`。
+- 费用筛选说明：界面“费用”选项由 `pricing` 文本自动提取标签（`免费可用`/`开源`/`含付费项`/`教育/校授权`），建议在 `pricing` 中显式包含这些关键词以便筛选更准确。
 
 ## 🎨 设计系统
 
@@ -266,6 +284,15 @@ excerpt: "文章摘要"
 2. 自定义样式放在组件内
 3. 全局样式使用CSS变量
 
+### 调整毕业设计时间轴图片布局
+- 缩略图排版/点击放大预览：`src/pages/Undergrad.tsx`（`ScaledImage`、`TimelineImageRow`）
+
+### 维护「提效工具库」
+- 改内容：编辑 `public/content/undergrad/tools/tools.json`，本地 `pnpm run dev` 后访问 `/#/undergrad?tab=tools` 查看效果（HashRouter）。
+- 改筛选/排序逻辑：`src/lib/undergradTools.ts`
+- 改页面与组件：`src/components/UndergradTools/UndergradToolsPanel.tsx`、`src/components/UndergradTools/ToolsFilters.tsx`、`src/components/UndergradTools/ToolCard.tsx`
+- 改数据加载：`src/hooks/useUndergradTools.ts`（并在 `src/hooks/useContent.ts` 中兼容导出）
+
 ## 📄 许可证
 
 MIT License
@@ -282,6 +309,6 @@ MIT License
 
 ---
 
-**最后更新**：2025-12-21
-**版本**：v1.2.2 
+**最后更新**：2026-01-01
+**版本**：v1.3.1 
 **作者**：LiuMengxuan 等

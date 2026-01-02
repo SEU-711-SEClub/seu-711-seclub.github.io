@@ -1,5 +1,13 @@
 import { useState, useEffect } from 'react';
 
+export type {
+  UndergradTool,
+  UndergradToolCategory,
+  UndergradToolLink,
+  UndergradToolsData,
+} from './useUndergradTools';
+export { useUndergradTools } from './useUndergradTools';
+
 export interface Announcement {
   title: string;
   date: string;

@@ -1,0 +1,1726 @@
+{
+  "updatedAt": "2026-01-01",
+  "intro": "把常见课程任务拆成「汇报」「绘图建模」「写作排版」「文献阅读」「编程实验」「数据分析」「协作管理」「截图录屏」等场景；每个工具都给出链接、优缺点与适用课程标签，方便按需选择。",
+  "cautions": [
+    "遵守课程学术规范：考试/测验/明确要求独立完成的作业中，禁止使用 AI 代写/代答。",
+    "注意隐私与版权：不要上传含个人信息、未公开数据或受版权保护的材料到第三方平台。",
+    "重要成果建议本地留档（源文件/导出稿/引用库），避免平台变更导致丢失。",
+    "SEU 已购买 WPS 教育版，在校师生可登录使用；使用教程参见[WPS 教育版使用指南](https://mp.weixin.qq.com/s?__biz=MzA4NDMxNTYzMA==&mid=2652302953&idx=2&sn=5a102f2cb25d66dc6a2fc2c7d03e6046&chksm=85dc1be15e2d74511298954564754717739313993f71a6e7625d2cf4a3da5999bf1f8e575ccd&scene=27)。教育版支持团队共享文件与协同编写。"
+  ],
+  "categories": [
+    {
+      "key": "slides",
+      "name": "PPT / 汇报",
+      "description": "适合课程展示、答辩与大作业汇报：快速出结构、统一风格、提升信息密度与可读性。",
+      "courseTags": ["所有课程", "课程汇报/答辩"],
+      "tools": [
+        {
+          "id": "powerpoint",
+          "name": "Microsoft PowerPoint",
+          "subtitle": "经典 PPT 工具（含 Designer / Copilot）",
+          "description": "生态成熟、模板丰富；搭配 AI 可快速从大纲生成页面结构与讲稿，适合大多数课程汇报与答辩。",
+          "links": [
+            { "label": "官网", "url": "https://www.microsoft.com/microsoft-365/powerpoint" },
+            { "label": "Copilot", "url": "https://www.microsoft.com/microsoft-365/copilot" }
+          ],
+          "platforms": ["Windows", "macOS", "Web"],
+          "pricing": "付费（教育版/校授权视情况）",
+          "useCases": ["课程汇报", "答辩", "一页纸总结"],
+          "courseTags": ["所有课程", "课程汇报/答辩"],
+          "pros": [
+            "模板/母版体系完善，容易做统一视觉规范",
+            "导出与兼容性强（PDF/视频等），交付稳定",
+            "动画与切换丰富，适合演示节奏控制"
+          ],
+          "cons": [
+            "做出高级排版需要一定设计经验与时间",
+            "协作与版本管理不如纯在线文档直观",
+            "部分 AI 能力依赖订阅与网络环境"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 先生成「1 页 1 要点」汇报大纲，再逐页扩写成要点与讲稿",
+              "让 AI 把实验/项目结果转成故事线：问题→方法→结果→讨论→结论",
+              "把表格数据交给 AI 建议图表类型与结论，再手动核对与美化"
+            ]
+          },
+          "alternatives": ["WPS 演示", "Canva", "Gamma"]
+        },
+        {
+          "id": "wps-presentation",
+          "name": "WPS 演示 / WPS AI",
+          "subtitle": "国内常用办公套件，模板与素材更本地化",
+          "description": "适合需要快速套模板/投屏演示的场景；与国内文件格式、字体与模板生态更贴合。",
+          "links": [{ "label": "官网", "url": "https://www.wps.cn/" }],
+          "platforms": ["Windows", "macOS", "Linux", "Web", "Mobile"],
+          "pricing": "免费 + 会员",
+          "useCases": ["课程汇报", "答辩", "课堂展示"],
+          "courseTags": ["所有课程", "课程汇报/答辩"],
+          "pros": [
+            "上手门槛低，模板/素材库丰富，适合快速出稿",
+            "在国内环境下同步/分享更方便",
+            "与常见 Office 格式兼容，投屏展示稳定"
+          ],
+          "cons": [
+            "部分高级功能与 AI 能力需要会员",
+            "模板素材质量参差，需要筛选并统一风格",
+            "复杂排版下与 Office 的细节兼容仍需自测"
+          ],
+          "ai": {
+            "highlights": [
+              "用 AI 把讲义/实验报告提炼成 5-7 页大纲，再补充图表与案例",
+              "让 AI 生成「每页讲什么 + 讲稿要点」，练习时对照优化节奏"
+            ]
+          },
+          "alternatives": ["PowerPoint", "Canva"]
+        },
+        {
+          "id": "canva",
+          "name": "Canva",
+          "subtitle": "在线模板化设计（PPT/海报/信息图）",
+          "description": "适合做更“好看”的视觉稿：PPT、海报、信息图、封面等；模板驱动，效率高。",
+          "links": [{ "label": "官网", "url": "https://www.canva.com/" }],
+          "platforms": ["Web", "Windows", "macOS", "Mobile"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["课程汇报", "海报", "信息图"],
+          "courseTags": ["所有课程", "课程汇报/答辩"],
+          "pros": [
+            "模板质量高，视觉一致性更容易保证",
+            "协作与分享方便，适合小组作业分工",
+            "素材库丰富，适合图文并茂的展示"
+          ],
+          "cons": [
+            "部分模板/素材需要付费，导出规格可能受限",
+            "重度依赖在线环境，离线编辑不友好",
+            "对严谨学术排版（公式/引用）支持一般"
+          ],
+          "ai": {
+            "highlights": [
+              "先用 AI 生成大纲/标题风格，再套用同一套视觉模板",
+              "把长段文字交给 AI 精简成「一屏能读完」的要点"
+            ]
+          },
+          "alternatives": ["PowerPoint", "WPS 演示", "Gamma"]
+        },
+        {
+          "id": "gamma",
+          "name": "Gamma",
+          "subtitle": "生成式演示：从大纲快速生成整套页面",
+          "description": "适合快速产出“可演示”的初稿：自动排版，风格偏现代，适合项目路演或课程展示。",
+          "links": [{ "label": "官网", "url": "https://gamma.app/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["课程汇报", "项目路演", "读书报告"],
+          "courseTags": ["所有课程", "课程汇报/答辩"],
+          "pros": [
+            "从文本到页面非常快，适合快速出初稿",
+            "排版风格统一，省去大量对齐/配色时间",
+            "适合把“想法”快速变成“可演示成果”"
+          ],
+          "cons": [
+            "细粒度自定义受限，复杂版式难做",
+            "导出到 PPT 后可能需要二次调整",
+            "依赖网络与账号体系，注意隐私与合规"
+          ],
+          "ai": {
+            "highlights": [
+              "先给 AI：课程要求 + 评分点 + 你已有内容，让它生成结构化大纲再导入生成",
+              "让 AI 为每页生成 1 句结论 + 2-3 个支撑点，保证信息密度"
+            ]
+          },
+          "alternatives": ["PowerPoint", "Canva"]
+        },
+        {
+          "id": "islide",
+          "name": "iSlide",
+          "subtitle": "PPT 插件：排版、图标、模板与一键美化",
+          "description": "适合“把 PPT 做得更像 PPT”：快速替换图标、统一色板、自动对齐与版式优化。",
+          "links": [{ "label": "官网", "url": "https://www.islide.cc/" }],
+          "platforms": ["Windows", "macOS"],
+          "pricing": "免费 + 会员",
+          "useCases": ["课程汇报", "答辩", "模板统一"],
+          "courseTags": ["所有课程", "课程汇报/答辩"],
+          "pros": [
+            "常用排版能力集合化，一键对齐/美化效率高",
+            "图标/模板资源库可直接复用",
+            "适合把“能用”快速提升到“好看易读”"
+          ],
+          "cons": [
+            "部分资源与高级功能需要会员",
+            "插件环境可能与 Office 版本/权限有关",
+            "依赖模板审美，容易出现“模板味”"
+          ],
+          "ai": {
+            "highlights": [
+              "AI 负责内容结构与要点，iSlide 负责统一排版与视觉细节",
+              "用 AI 给出“每页用什么图表/示意图”，再用插件快速落地"
+            ]
+          },
+          "alternatives": ["PowerPoint", "WPS 演示"]
+        }
+      ]
+    }
+    ,
+    {
+      "key": "diagram",
+      "name": "绘图 / UML / 流程图",
+      "description": "适合软件工程类、课程设计与实验报告：用更清晰的图把复杂系统讲明白。",
+      "courseTags": ["软件工程/专业课", "课程设计/大作业", "实验报告"],
+      "tools": [
+        {
+          "id": "plantuml",
+          "name": "PlantUML",
+          "subtitle": "用文本生成 UML/时序图/活动图等（适合配合 AI）",
+          "description": "用一段描述性代码生成图，适合放进报告/论文并用 Git 管理版本；也可以让 AI 直接生成 PlantUML 代码快速出图。",
+          "links": [
+            { "label": "官网", "url": "https://plantuml.com/zh/" },
+            { "label": "在线编辑", "url": "https://www.planttext.com/" }
+          ],
+          "platforms": ["Web", "CLI", "VS Code"],
+          "pricing": "免费 / 开源",
+          "useCases": ["UML 类图", "时序图", "活动图", "架构图"],
+          "courseTags": ["软件工程/专业课", "课程设计/大作业", "实验报告"],
+          "pros": [
+            "文本化表达，适合版本控制与多人评审",
+            "图可由 AI/脚本批量生成，改动可追踪",
+            "覆盖 UML/时序/活动/ER 等多种图形"
+          ],
+          "cons": [
+            "自动布局为主，手动微调布局能力有限",
+            "默认风格偏单调，需要主题/皮肤进一步美化",
+            "复杂图易拥挤，需要拆分与分层表达"
+          ],
+          "ai": {
+            "highlights": [
+              "把需求/用例/接口列表给 AI，让它输出 PlantUML 代码，再按课程要求精修命名",
+              "把交互流程写成“角色-消息-返回值”，让 AI 生成时序图初稿",
+              "让 AI 统一术语与命名（中英/驼峰），提升图的规范性"
+            ]
+          },
+          "alternatives": ["Mermaid", "diagrams.net", "ProcessOn"]
+        },
+        {
+          "id": "mermaid",
+          "name": "Mermaid",
+          "subtitle": "Markdown 里写图：流程图、时序图、甘特图等",
+          "description": "适合在 Markdown/文档中“边写边画”，尤其适合课程文档、项目 README 与实验报告。",
+          "links": [
+            { "label": "官网", "url": "https://mermaid.js.org/" },
+            { "label": "在线编辑", "url": "https://mermaid.live/" }
+          ],
+          "platforms": ["Web", "Markdown", "Docs"],
+          "pricing": "免费 / 开源",
+          "useCases": ["流程图", "时序图", "甘特图", "状态图"],
+          "courseTags": ["软件工程/专业课", "课程设计/大作业", "实验报告"],
+          "pros": [
+            "与 Markdown 生态融合，文档与图放在一起维护",
+            "语法简单，适合快速表达流程与关系",
+            "渲染渠道多（GitHub/文档站/编辑器）"
+          ],
+          "cons": [
+            "复杂布局与精细美化受限，容易拥挤",
+            "不同渲染器版本存在兼容差异",
+            "对严格 UML 表达不如 PlantUML 全面"
+          ],
+          "ai": {
+            "highlights": [
+              "把步骤列表/流程描述交给 AI，让它生成 Mermaid flowchart，再手动补充边界条件",
+              "用 AI 把口语化描述改写为结构化节点与连线，降低返工"
+            ]
+          },
+          "alternatives": ["PlantUML", "diagrams.net"]
+        },
+        {
+          "id": "dbdiagram",
+          "name": "dbdiagram",
+          "subtitle": "ER 图/表结构设计：用 DBML 快速生成数据库关系图",
+          "description": "适合数据库课程/项目：用 DBML（文本）描述表与关系，自动生成 ER 图；也支持从 SQL 导入，便于协作与版本管理。",
+          "links": [{ "label": "官网", "url": "https://dbdiagram.io/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["ER 图", "数据库建模", "表结构设计"],
+          "courseTags": ["软件工程/专业课", "课程设计/大作业", "数据库/数据建模", "团队协作"],
+          "pros": [
+            "文本化（DBML）表达，适合版本控制与评审协作",
+            "出图快，适合做课程项目的数据库设计展示",
+            "支持从 SQL 导入，降低从已有表结构出图的成本"
+          ],
+          "cons": [
+            "免费版可能有数量/协作/导出限制",
+            "复杂图的布局与美化控制有限，可能需要拆分",
+            "DBML/约束细节仍需要自己理解并核对"
+          ],
+          "ai": {
+            "highlights": [
+              "把需求中的实体/字段/关系描述给 AI，让它生成 DBML 初稿，再由你核对主键/外键/约束",
+              "让 AI 根据接口与业务流程补全表字段与关系（注意范式与冗余）",
+              "让 AI 输出“数据字典”表格（字段含义/类型/约束），配合 ER 图一起交付"
+            ]
+          },
+          "alternatives": ["diagrams.net", "PlantUML", "Mermaid"]
+        },
+        {
+          "id": "diagrams-net",
+          "name": "diagrams.net（draw.io）",
+          "subtitle": "自由拖拽绘图：流程图、UML、架构图",
+          "description": "适合需要“手动精修布局”的场景：对齐、分组、配色都可控；也适合导出插入报告。",
+          "links": [
+            { "label": "官网", "url": "https://www.diagrams.net/" },
+            { "label": "在线应用", "url": "https://app.diagrams.net/" }
+          ],
+          "platforms": ["Web", "Desktop"],
+          "pricing": "免费",
+          "useCases": ["架构图", "UML", "网络拓扑", "流程图"],
+          "courseTags": ["软件工程/专业课", "课程设计/大作业", "实验报告"],
+          "pros": [
+            "所见即所得，布局可精调，适合追求“好看”",
+            "图形库丰富，导出格式多（SVG/PNG/PDF）",
+            "学习成本低，适合快速上手"
+          ],
+          "cons": [
+            "图的“语义”不如文本化工具，改动可追踪性弱",
+            "多人协作与版本控制需要额外约定",
+            "大型图文件容易变得难以维护"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 先给出图的结构（模块/连线/图层），你再用拖拽方式精修布局",
+              "让 AI 生成统一的图例与命名规范，避免术语混乱"
+            ]
+          },
+          "alternatives": ["Figma", "ProcessOn", "PlantUML"]
+        },
+        {
+          "id": "excalidraw",
+          "name": "Excalidraw",
+          "subtitle": "手绘风协作白板：适合头脑风暴与草图",
+          "description": "适合小组讨论时快速画草图、画结构；“不完美”的手绘风反而更利于讨论。",
+          "links": [{ "label": "官网", "url": "https://excalidraw.com/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 / 开源",
+          "useCases": ["头脑风暴", "结构草图", "课堂讨论"],
+          "courseTags": ["课程设计/大作业", "团队协作", "软件工程/专业课"],
+          "pros": [
+            "上手极快，适合讨论时快速表达想法",
+            "协作友好，适合远程/线下小组共创",
+            "导出方便，可把草图放进汇报或报告"
+          ],
+          "cons": [
+            "不适合做严谨的最终版 UML/工程图",
+            "对齐与精细排版能力有限",
+            "复杂图容易显得凌乱，需要整理"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 先把讨论内容整理成模块列表与关系，再按这个结构画草图",
+              "用 AI 把草图口述成正式设计说明，写进报告“设计思路”"
+            ]
+          },
+          "alternatives": ["diagrams.net", "Figma"]
+        },
+        {
+          "id": "figma",
+          "name": "Figma",
+          "subtitle": "设计与协作：界面原型、信息架构、组件规范",
+          "description": "适合课程项目做 UI 原型、流程与信息架构图；协作体验好，适合团队分工。",
+          "links": [{ "label": "官网", "url": "https://www.figma.com/" }],
+          "platforms": ["Web", "Desktop"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["UI 原型", "信息架构", "组件规范"],
+          "courseTags": ["课程设计/大作业", "团队协作", "软件工程/专业课"],
+          "pros": [
+            "协作强，评论/版本/组件化适合团队项目",
+            "适合做可复用的设计规范与原型演示",
+            "插件生态丰富，效率高"
+          ],
+          "cons": [
+            "对非设计同学有一定学习成本",
+            "重度依赖在线环境，网络不稳影响体验",
+            "做纯工程图不如专用绘图工具顺手"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 帮你把需求拆成页面与状态（正常/空/加载/错误），再在原型中体现",
+              "让 AI 生成一致的文案与交互提示，减少占位文案"
+            ]
+          },
+          "alternatives": ["diagrams.net", "Excalidraw"]
+        },
+        {
+          "id": "processon",
+          "name": "ProcessOn",
+          "subtitle": "在线流程图/UML/思维导图（国内常用）",
+          "description": "适合需要在线协作、快速共享链接的课程项目；模板多，适合快速出图。",
+          "links": [{ "label": "官网", "url": "https://www.processon.com/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["流程图", "UML", "思维导图"],
+          "courseTags": ["软件工程/专业课", "课程设计/大作业", "团队协作"],
+          "pros": [
+            "在线协作与分享方便，适合小组作业",
+            "模板多，出图速度快",
+            "覆盖流程图/UML/思维导图等多个场景"
+          ],
+          "cons": [
+            "免费版可能有容量/导出限制",
+            "依赖在线环境，注意隐私与合规",
+            "复杂图维护成本高，版本管理需要约定"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 先给出模块划分与连接关系，你再用模板快速绘制并统一风格"
+            ]
+          },
+          "alternatives": ["diagrams.net", "PlantUML", "Mermaid"]
+        }
+      ]
+    }
+    ,
+    {
+      "key": "writing",
+      "name": "写作 / 排版 / 笔记",
+      "description": "适合实验报告、课程作业与知识整理：结构清晰、格式统一、可复用模板。",
+      "courseTags": ["所有课程", "实验报告", "科研训练/论文写作"],
+      "tools": [
+        {
+          "id": "typora",
+          "name": "Typora",
+          "subtitle": "所见即所得 Markdown 编辑器",
+          "description": "写实验报告与课程笔记的高效选择：专注内容、格式统一，配合导出可直接交付。",
+          "links": [{ "label": "官网", "url": "https://typora.io/" }],
+          "platforms": ["Windows", "macOS", "Linux"],
+          "pricing": "付费（一次性授权）",
+          "useCases": ["实验报告", "课程笔记", "小作业文档"],
+          "courseTags": ["所有课程", "实验报告"],
+          "pros": [
+            "写作体验顺滑，标题/列表/代码块适合实验报告",
+            "Markdown 模板可复用，便于统一格式",
+            "可导出 PDF/HTML 等，提交方便"
+          ],
+          "cons": [
+            "多人协作不如在线文档方便",
+            "复杂排版（长表格/图片排版）需要额外技巧",
+            "需要自己管理图片与引用文件路径"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 先生成报告骨架（目的/方法/结果/讨论/结论），你按模板填充数据与图表",
+              "让 AI 把代码注释与实验步骤润色成更清晰的说明文字（注意核对）"
+            ]
+          },
+          "alternatives": ["Obsidian", "飞书文档", "Notion"]
+        },
+        {
+          "id": "obsidian",
+          "name": "Obsidian",
+          "subtitle": "本地优先知识库：双链、模板与图谱",
+          "description": "适合长期知识管理：把课程笔记、概念、习题与总结串起来，形成可复用的“个人教材”。",
+          "links": [{ "label": "官网", "url": "https://obsidian.md/" }],
+          "platforms": ["Windows", "macOS", "Linux", "Mobile"],
+          "pricing": "免费（个人使用）",
+          "useCases": ["课程笔记", "知识库", "复习总结"],
+          "courseTags": ["所有课程"],
+          "pros": [
+            "本地 Markdown 文件可控，迁移与备份简单",
+            "模板/双链/标签适合沉淀长期知识体系",
+            "插件生态丰富，可按个人习惯定制"
+          ],
+          "cons": [
+            "协作体验一般，更适合个人而非团队主文档",
+            "配置空间大，容易“折腾”影响效率",
+            "跨设备同步需要额外方案"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 把一章内容总结成“概念卡片 + 易错点 + 自测题”，再放入知识库复习",
+              "用 AI 把零散笔记整理成结构化大纲，辅助你做期末复习清单"
+            ]
+          },
+          "alternatives": ["Typora", "Notion"]
+        },
+        {
+          "id": "overleaf",
+          "name": "Overleaf",
+          "subtitle": "在线 LaTeX：适合论文/报告的严谨排版",
+          "description": "适合需要公式、引用与图表的文档：论文、课程大作业报告、毕业设计论文等。",
+          "links": [{ "label": "官网", "url": "https://www.overleaf.com/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["论文写作", "课程报告", "毕业设计"],
+          "courseTags": ["科研训练/论文写作", "毕业设计", "实验报告"],
+          "pros": [
+            "公式与参考文献排版专业，适合学术写作",
+            "协作编辑与版本记录适合组队写报告",
+            "模板丰富（论文/报告/简历等）"
+          ],
+          "cons": [
+            "学习成本较高（LaTeX/BibTeX）",
+            "复杂项目编译与依赖可能需要排查",
+            "网络环境会影响在线编译体验"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 把“结果描述”写得更学术（必须核对数据与逻辑）",
+              "让 AI 生成参考文献 BibTeX（再手动校验条目信息）"
+            ]
+          },
+          "alternatives": ["Word", "Markdown + 导出 PDF"]
+        },
+        {
+          "id": "feishu-docs",
+          "name": "飞书文档",
+          "subtitle": "在线协作：文档/表格/多维表格",
+          "description": "适合小组作业协作：分工写作、评论、任务跟踪；也可做资料收集与实验记录。",
+          "links": [{ "label": "官网", "url": "https://www.feishu.cn/" }],
+          "platforms": ["Web", "Desktop", "Mobile"],
+          "pricing": "免费 + 企业/教育方案",
+          "useCases": ["小组协作", "资料整理", "进度跟踪"],
+          "courseTags": ["团队协作", "课程设计/大作业", "所有课程"],
+          "pros": [
+            "协作体验好（评论、权限、历史版本）",
+            "适合做组队资料汇总与任务分配",
+            "多维表格适合追踪任务与实验记录"
+          ],
+          "cons": [
+            "在线服务依赖网络与账号体系",
+            "复杂排版与学术引用能力一般",
+            "需要注意权限设置与隐私合规"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 把讨论纪要整理成任务清单与责任人，再同步到表格/看板",
+              "让 AI 生成报告目录与检查清单，避免遗漏实验条件与对比结果"
+            ]
+          },
+          "alternatives": ["Notion", "腾讯文档", "Google Docs"]
+        }
+      ]
+    }
+    ,
+    {
+      "key": "reference",
+      "name": "文献管理 / 阅读",
+      "description": "适合科研训练、课程论文与毕业设计：管理引用、批注阅读、快速生成参考文献。",
+      "courseTags": ["科研训练/论文写作", "毕业设计"],
+      "tools": [
+        {
+          "id": "google-scholar",
+          "name": "Google Scholar（谷歌学术）",
+          "subtitle": "学术检索：引用追踪、相关工作、邮件提醒",
+          "description": "适合做相关工作检索与引用追踪：按关键词/作者/时间筛选，利用“引用/被引用/相关工作”快速扩展阅读清单。",
+          "links": [{ "label": "官网", "url": "https://scholar.google.com/" }],
+          "platforms": ["Web"],
+          "pricing": "免费",
+          "useCases": ["学术检索", "引用追踪", "关注作者/论文"],
+          "courseTags": ["科研训练/论文写作", "毕业设计"],
+          "pros": [
+            "覆盖面广，能快速找到经典论文与相关工作",
+            "引用/被引用链路清晰，适合扩展阅读",
+            "可导出引用（BibTeX 等），便于写论文/报告"
+          ],
+          "cons": [
+            "部分地区/网络环境可能不可用或不稳定",
+            "检索结果质量参差，需要筛选与交叉验证",
+            "并非所有论文都可直接下载全文，可能需要通过学校资源获取"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 先生成中英关键词与同义词列表，再组合成多组检索式提升召回率",
+              "把标题/摘要交给 AI 生成“检索扩展词”（方法名/数据集/指标），用来继续追踪",
+              "让 AI 生成阅读优先级清单（必读/选读/背景），但最终以你的研究目标为准"
+            ]
+          },
+          "alternatives": ["Semantic Scholar", "arXiv", "中国知网（CNKI）"]
+        },
+        {
+          "id": "cnki",
+          "name": "中国知网（CNKI）",
+          "subtitle": "中文文献检索：期刊/学位论文/会议等",
+          "description": "适合查中文论文与学位论文，尤其是国内研究与工程实践类资料；学校通常有机构权限（以校网/图书馆为准）。",
+          "links": [{ "label": "官网", "url": "https://www.cnki.net/" }],
+          "platforms": ["Web"],
+          "pricing": "免费检索 + 付费下载（校授权/机构权限视情况）",
+          "useCases": ["中文文献检索", "相关工作", "引用导出"],
+          "courseTags": ["科研训练/论文写作", "毕业设计"],
+          "pros": [
+            "中文文献覆盖全面，适合查国内研究与行业资料",
+            "分类与筛选维度丰富，便于按学科/来源缩小范围",
+            "可导出引用信息，便于写作与引用管理（需校对）"
+          ],
+          "cons": [
+            "全文下载多为付费/机构授权，校外访问可能受限",
+            "引用与元数据可能存在不一致，需要人工校对",
+            "检索与下载涉及账号/权限，注意合规使用"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 把课题转成“中文关键词 + 同义词 + 相关术语”，提高检索命中率",
+              "把多篇摘要交给 AI 做主题聚类（研究方向/方法/数据），辅助你写相关工作结构",
+              "让 AI 生成“国内研究现状”段落的提纲，但引用与结论必须基于原文核对"
+            ]
+          },
+          "alternatives": ["万方数据", "维普", "Google Scholar（谷歌学术）"]
+        },
+        {
+          "id": "zotero",
+          "name": "Zotero",
+          "subtitle": "开源文献管理：抓取、批注、引用与同步",
+          "description": "科研训练与毕业设计常用工具：网页一键抓取文献信息，Word/LaTeX 引用方便。",
+          "links": [{ "label": "官网", "url": "https://www.zotero.org/" }],
+          "platforms": ["Windows", "macOS", "Linux"],
+          "pricing": "免费 / 开源（同步空间可付费）",
+          "useCases": ["文献管理", "引用格式", "PDF 批注"],
+          "courseTags": ["科研训练/论文写作", "毕业设计"],
+          "pros": [
+            "抓取元数据方便，引用/参考文献自动化",
+            "插件生态丰富（浏览器、PDF、学术搜索等）",
+            "可与 Word/LaTeX 工作流结合"
+          ],
+          "cons": [
+            "同步与协作需要一定配置（空间/群组）",
+            "元数据质量不稳定时需要手动校对",
+            "PDF 批注体验与专业阅读器相比略逊"
+          ],
+          "ai": {
+            "highlights": [
+              "把摘要/结论交给 AI 生成阅读卡片（贡献/方法/局限/可复现要点），再存入笔记",
+              "让 AI 把多篇论文对比成表格维度（方法/数据/指标/结论），用于相关工作写作"
+            ]
+          },
+          "alternatives": ["Mendeley", "EndNote"]
+        },
+        {
+          "id": "mendeley",
+          "name": "Mendeley",
+          "subtitle": "文献管理与学术社交（含 PDF 阅读器）",
+          "description": "适合文献库管理与批注阅读；对一些同学来说更“开箱即用”。",
+          "links": [{ "label": "官网", "url": "https://www.mendeley.com/" }],
+          "platforms": ["Windows", "macOS", "Web"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["文献管理", "PDF 阅读", "引用管理"],
+          "courseTags": ["科研训练/论文写作", "毕业设计"],
+          "pros": [
+            "上手快，管理与阅读集成度高",
+            "同步与跨设备使用相对方便",
+            "适合快速搭建个人文献库"
+          ],
+          "cons": [
+            "生态与可扩展性不如 Zotero 灵活",
+            "部分功能与空间可能受订阅限制",
+            "长期可迁移性需要关注导出与备份"
+          ],
+          "ai": {
+            "highlights": [
+              "用 AI 把批注内容整理成“核心观点/可复现细节/疑问点”，形成读书笔记",
+              "让 AI 帮你写相关工作段落的结构（按主题/方法/时间线），再填充证据"
+            ]
+          },
+          "alternatives": ["Zotero"]
+        },
+        {
+          "id": "connected-papers",
+          "name": "Connected Papers",
+          "subtitle": "文献关系图谱：快速扩展相关工作",
+          "description": "适合从一篇种子论文出发，快速找到相似工作与“经典引用”，形成阅读路线图。",
+          "links": [{ "label": "官网", "url": "https://www.connectedpapers.com/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["找相关工作", "梳理领域脉络"],
+          "courseTags": ["科研训练/论文写作", "毕业设计"],
+          "pros": [
+            "关系图直观，扩展阅读范围效率高",
+            "适合发现“你没想到但很相关”的论文",
+            "辅助构建相关工作阅读清单"
+          ],
+          "cons": [
+            "结果依赖数据库覆盖度，可能漏掉中文/小众文献",
+            "需要一定检索与判断能力，不能替代精读",
+            "依赖在线服务，注意隐私与合规"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 帮你把关系图中的论文分组并标注主题，形成阅读路线图",
+              "让 AI 为每组论文生成比较维度，读起来更有目标"
+            ]
+          },
+          "alternatives": ["Google Scholar", "Semantic Scholar"]
+        }
+      ]
+    }
+    ,
+    {
+      "key": "dev",
+      "name": "代码 / 实验 / 调试",
+      "description": "适合编程课、实验与课程设计：提升编码效率、调试效率与协作质量。",
+      "courseTags": ["编程课/实验", "课程设计/大作业", "团队协作"],
+      "tools": [
+        {
+          "id": "vscode",
+          "name": "Visual Studio Code",
+          "subtitle": "轻量编辑器 + 插件生态（远程开发也很强）",
+          "description": "几乎所有编程课程都适用：语言支持广，插件丰富，适合写代码、写报告、看数据与远程开发。",
+          "links": [{ "label": "官网", "url": "https://code.visualstudio.com/" }],
+          "platforms": ["Windows", "macOS", "Linux"],
+          "pricing": "免费",
+          "useCases": ["编程实验", "课程项目", "远程开发"],
+          "courseTags": ["编程课/实验", "课程设计/大作业"],
+          "pros": [
+            "语言覆盖广，插件生态强（Python/C++/Java/前端等）",
+            "集成终端、调试器与 Git，学习成本低",
+            "可远程连接服务器/WSL，适合做实验与大作业"
+          ],
+          "cons": [
+            "插件过多会变得臃肿，配置需要克制",
+            "大型项目体验不如部分重型 IDE",
+            "团队统一开发规范仍需额外约定（格式化、lint 等）"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 生成单元测试用例/边界条件清单，再由你实现并验证",
+              "让 AI 解释报错与堆栈，给出排查步骤（别跳过复现）"
+            ]
+          },
+          "alternatives": ["JetBrains IDE"]
+        },
+        {
+          "id": "jetbrains",
+          "name": "JetBrains IDE（IntelliJ / PyCharm 等）",
+          "subtitle": "重型 IDE：代码理解与重构能力强",
+          "description": "适合大型课程项目：索引/跳转/重构/调试能力强，工程化体验更完整。",
+          "links": [{ "label": "官网", "url": "https://www.jetbrains.com/" }],
+          "platforms": ["Windows", "macOS", "Linux"],
+          "pricing": "付费（学生授权通常可免费申请）",
+          "useCases": ["课程项目", "大型代码库", "重构"],
+          "courseTags": ["课程设计/大作业", "编程课/实验"],
+          "pros": [
+            "代码理解强：跳转、查找引用、重构非常高效",
+            "调试、测试、构建工具链集成度高",
+            "对 Java/Kotlin/Python 等生态支持成熟"
+          ],
+          "cons": [
+            "对机器性能要求较高，启动与索引耗时",
+            "配置与学习成本高于轻量编辑器",
+            "部分功能依赖授权与联网"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 帮你把需求拆成模块与接口，再用 IDE 的重构能力快速落地",
+              "让 AI 生成代码评审清单（边界条件/异常/日志/性能）"
+            ]
+          },
+          "alternatives": ["VS Code"]
+        },
+        {
+          "id": "git-github",
+          "name": "Git + GitHub",
+          "subtitle": "版本控制与协作：分支、PR、Issue 与代码评审",
+          "description": "课程设计与团队项目必备：可追踪改动、回滚、协作评审，也便于展示项目成果。",
+          "links": [
+            { "label": "Git", "url": "https://git-scm.com/" },
+            { "label": "GitHub", "url": "https://github.com/" }
+          ],
+          "platforms": ["Cross-platform"],
+          "pricing": "免费",
+          "useCases": ["团队协作", "版本管理", "项目展示"],
+          "courseTags": ["课程设计/大作业", "团队协作", "软件工程/专业课"],
+          "pros": [
+            "改动可追踪、可回滚，降低“改崩了”风险",
+            "PR/Issue 流程适合团队分工与评审",
+            "项目展示与交付更规范，便于答辩"
+          ],
+          "cons": [
+            "学习曲线存在（分支/冲突/回滚）",
+            "需要团队约定规范（分支策略/提交信息）",
+            "对大文件与二进制资源不友好（需 LFS 等）"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 按变更生成提交信息草稿（feat/fix/docs），再由你确认是否准确",
+              "让 AI 生成 PR 描述模板：背景、改动点、验证方式、风险点"
+            ]
+          },
+          "alternatives": ["Gitee", "GitLab"]
+        },
+        {
+          "id": "copilot",
+          "name": "GitHub Copilot / Codeium",
+          "subtitle": "代码补全与生成：适合样板代码与测试",
+          "description": "适合课程项目中重复性高的代码：接口实现、测试脚手架、工具脚本等（必须理解与验证）。",
+          "links": [
+            { "label": "GitHub Copilot", "url": "https://github.com/features/copilot" },
+            { "label": "Codeium", "url": "https://codeium.com/" }
+          ],
+          "platforms": ["IDE 插件"],
+          "pricing": "付费/免费（视产品）",
+          "useCases": ["样板代码", "单元测试", "重构建议"],
+          "courseTags": ["编程课/实验", "课程设计/大作业"],
+          "pros": [
+            "写样板代码很快，节省重复劳动",
+            "可辅助生成测试与文档注释（仍需校验）",
+            "与主流 IDE 集成，使用门槛低"
+          ],
+          "cons": [
+            "可能生成“能跑但不对”的代码，必须验证与理解",
+            "对课程作业有学术规范要求时需谨慎使用",
+            "依赖网络与账号体系，注意隐私与合规"
+          ],
+          "ai": {
+            "highlights": [
+              "先让 AI 生成“函数签名 + 测试用例”，你按测试驱动实现核心逻辑",
+              "让 AI 提醒潜在边界条件与异常分支，再用测试覆盖"
+            ]
+          },
+          "alternatives": ["手写模板 + 代码片段库"]
+        },
+        {
+          "id": "postman",
+          "name": "Postman / Hoppscotch",
+          "subtitle": "接口调试：请求集合、环境变量与 Mock",
+          "description": "适合 Web/后端课程项目：快速调试接口、记录请求、共享集合给队友。",
+          "links": [
+            { "label": "Postman", "url": "https://www.postman.com/" },
+            { "label": "Hoppscotch", "url": "https://hoppscotch.io/" }
+          ],
+          "platforms": ["Desktop", "Web"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["接口联调", "API 文档", "Mock"],
+          "courseTags": ["课程设计/大作业", "团队协作", "编程课/实验"],
+          "pros": [
+            "接口调试直观，适合快速定位问题",
+            "可共享集合与环境变量，协作方便",
+            "能生成文档与示例请求，提高交付质量"
+          ],
+          "cons": [
+            "配置多环境与鉴权有一定学习成本",
+            "大型集合维护需要规范（命名/目录）",
+            "部分协作能力需要账号与订阅"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 根据接口说明生成示例请求与测试用例，再导入工具验证",
+              "让 AI 把错误响应归因到参数/权限/服务端逻辑的排查路径"
+            ]
+          },
+          "alternatives": ["curl", "HTTPie"]
+        },
+        {
+          "id": "docker",
+          "name": "Docker",
+          "subtitle": "环境一致性：把依赖封装成可复现运行环境",
+          "description": "适合课程设计/实验需要“跑在我电脑没问题”的场景：统一依赖、避免环境坑，方便交付与部署。",
+          "links": [{ "label": "官网", "url": "https://www.docker.com/" }],
+          "platforms": ["Windows", "macOS", "Linux"],
+          "pricing": "免费 + 订阅（视用途）",
+          "useCases": ["环境复现", "部署演示", "依赖隔离"],
+          "courseTags": ["课程设计/大作业", "团队协作"],
+          "pros": [
+            "环境可复现，降低配置差异导致的故障",
+            "便于交付与演示（一次构建，多处运行）",
+            "适合数据库/中间件等依赖的快速启动"
+          ],
+          "cons": [
+            "学习曲线存在（镜像/网络/卷/权限）",
+            "对 Windows/macOS 可能有额外资源占用",
+            "不等于安全隔离，仍需注意密钥与数据"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 根据你的依赖清单生成 Dockerfile/Compose 初稿，再逐行核对与最小化权限",
+              "让 AI 帮你写“如何运行/如何验证”的 README，提升交付质量"
+            ]
+          },
+          "alternatives": ["conda/venv + README", "VM"]
+        }
+      ]
+    }
+    ,
+    {
+      "key": "data",
+      "name": "数据分析 / 可视化",
+      "description": "适合数据分析、机器学习与实验报告：快速探索数据、画图、复现结果。",
+      "courseTags": ["数据分析/AI课程", "实验报告", "科研训练/论文写作"],
+      "tools": [
+        {
+          "id": "jupyterlab",
+          "name": "JupyterLab",
+          "subtitle": "Notebook 工作流：代码 + 结果 + 解释一体化",
+          "description": "适合做数据分析与实验：一步步记录过程，便于复现与写报告。",
+          "links": [{ "label": "官网", "url": "https://jupyter.org/" }],
+          "platforms": ["Windows", "macOS", "Linux"],
+          "pricing": "免费 / 开源",
+          "useCases": ["数据分析", "实验记录", "可视化"],
+          "courseTags": ["数据分析/AI课程", "实验报告"],
+          "pros": [
+            "过程可复现：代码、图表、文字说明放在一起",
+            "适合探索式分析与快速试验",
+            "生态成熟（pandas/matplotlib 等）"
+          ],
+          "cons": [
+            "项目工程化与模块化需要额外规范",
+            "大数据量或长时间训练不适合全在 Notebook 里做",
+            "依赖环境管理（conda/venv），配置有门槛"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 先生成分析计划（看哪些分布/相关性/异常值），再逐步实现并核对",
+              "让 AI 帮你把图表解读写成报告语言（结论 + 证据 + 局限）"
+            ]
+          },
+          "alternatives": ["Google Colab", "RStudio"]
+        },
+        {
+          "id": "colab",
+          "name": "Google Colab",
+          "subtitle": "在线 Notebook（含 GPU）：适合快速跑实验",
+          "description": "适合无需本地配环境、想快速跑通实验或使用 GPU 的场景（注意配额与数据合规）。",
+          "links": [{ "label": "官网", "url": "https://colab.research.google.com/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["快速实验", "GPU 训练", "共享 Notebook"],
+          "courseTags": ["数据分析/AI课程", "科研训练/论文写作"],
+          "pros": [
+            "免环境安装，打开就能跑",
+            "可用 GPU/TPU（视配额）",
+            "分享与协作方便，适合组队复现实验"
+          ],
+          "cons": [
+            "依赖在线环境与配额，稳定性受限",
+            "文件管理与数据上传需要额外注意",
+            "不适合长期、稳定的工程化开发"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 生成实验脚本骨架与参数表，再在 Colab 跑通并记录结果",
+              "让 AI 帮你把 notebook 清理成“可复现实验”版本：固定随机种子、输出关键指标"
+            ]
+          },
+          "alternatives": ["本地 JupyterLab", "Kaggle Notebooks"]
+        },
+        {
+          "id": "autodl",
+          "name": "AutoDL（算力云 / 云 GPU）",
+          "subtitle": "租用 GPU + 预装环境：适合深度学习作业/训练",
+          "description": "适合需要更稳定 GPU 算力的课程与实验：可按需租用显卡环境，跑训练、推理与 Notebook，并更容易复现环境。",
+          "links": [{ "label": "官网", "url": "https://www.autodl.com/" }],
+          "platforms": ["Web"],
+          "pricing": "付费（按量计费）",
+          "useCases": ["云 GPU 训练", "远程 Notebook", "实验复现"],
+          "courseTags": ["数据分析/AI课程", "科研训练/论文写作", "课程设计/大作业"],
+          "pros": [
+            "按需获得 GPU 资源，适合训练/推理等计算密集任务",
+            "更容易统一环境，减少“环境配不出来”带来的时间消耗",
+            "适合把实验过程标准化，便于复现与写报告"
+          ],
+          "cons": [
+            "需要付费且对网络稳定性有要求",
+            "需要自己管理数据与代码（上传/下载/备份），注意隐私合规",
+            "环境虽预装但仍可能遇到依赖/驱动差异，需要排查"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 把课程/论文复现实验拆成环境清单（Python/CUDA/依赖版本），减少配置遗漏",
+              "让 AI 生成训练脚本与参数表（batch size/学习率/日志保存），再用小样本先验证",
+              "让 AI 生成“实验记录模板”（配置、随机种子、指标、耗时），提高复现与写作效率"
+            ]
+          },
+          "alternatives": ["Google Colab", "本地训练（显卡）", "云服务器"]
+        },
+        {
+          "id": "pandas-matplotlib",
+          "name": "pandas + matplotlib/seaborn",
+          "subtitle": "Python 数据处理与可视化的事实标准",
+          "description": "适合绝大多数数据分析课与实验报告：清洗、统计、画图与导出。",
+          "links": [
+            { "label": "pandas", "url": "https://pandas.pydata.org/" },
+            { "label": "matplotlib", "url": "https://matplotlib.org/" },
+            { "label": "seaborn", "url": "https://seaborn.pydata.org/" }
+          ],
+          "platforms": ["Cross-platform"],
+          "pricing": "免费 / 开源",
+          "useCases": ["数据清洗", "统计分析", "作图"],
+          "courseTags": ["数据分析/AI课程", "实验报告", "科研训练/论文写作"],
+          "pros": [
+            "可控性强，适合做严谨的实验对比与图表输出",
+            "生态成熟，资料多，容易排错",
+            "和 Notebook/脚本/工程都能结合"
+          ],
+          "cons": [
+            "需要一定编程基础与环境管理",
+            "默认图表样式需要美化，才能用于高质量汇报",
+            "数据量大时需要考虑性能与内存"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 把数据字段解释成清洗步骤与特征工程建议，再逐条验证",
+              "让 AI 根据图表生成结论句，你再检查是否与图一致"
+            ]
+          },
+          "alternatives": ["Excel", "R + ggplot2"]
+        },
+        {
+          "id": "excel",
+          "name": "Microsoft Excel",
+          "subtitle": "快速统计、透视表与图表：适合小数据量",
+          "description": "适合课程作业与实验中“小而快”的统计与可视化：透视表、筛选、简单回归等。",
+          "links": [{ "label": "官网", "url": "https://www.microsoft.com/microsoft-365/excel" }],
+          "platforms": ["Windows", "macOS", "Web"],
+          "pricing": "付费（教育版/校授权视情况）",
+          "useCases": ["快速统计", "透视表", "简单图表"],
+          "courseTags": ["实验报告", "所有课程"],
+          "pros": [
+            "上手快，适合快速探索与做小规模统计",
+            "透视表/筛选等功能适合数据汇总",
+            "导出与分享方便"
+          ],
+          "cons": [
+            "可复现性弱（操作步骤难记录），容易出错",
+            "复杂分析与自动化不如脚本方式",
+            "大数据量性能受限"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 给你“应该做哪些透视表/图表来回答题目”的检查清单",
+              "让 AI 帮你把图表结论写成报告句式（需核对）"
+            ]
+          },
+          "alternatives": ["pandas + Notebook", "Power BI"]
+        },
+        {
+          "id": "powerbi",
+          "name": "Power BI / Tableau Public",
+          "subtitle": "可视化看板：适合做更“像产品”的数据展示",
+          "description": "适合课程大作业展示数据看板，强调交互与可视化表达。",
+          "links": [
+            { "label": "Power BI", "url": "https://powerbi.microsoft.com/" },
+            { "label": "Tableau Public", "url": "https://public.tableau.com/" }
+          ],
+          "platforms": ["Desktop", "Web"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["可视化看板", "交互展示", "数据故事"],
+          "courseTags": ["数据分析/AI课程", "课程设计/大作业", "课程汇报/答辩"],
+          "pros": [
+            "交互式可视化强，适合展示与答辩",
+            "拖拽式建模与图表，出效果快",
+            "适合把数据结果包装成“故事”"
+          ],
+          "cons": [
+            "对数据源与建模有一定学习成本",
+            "分享与发布可能受平台限制",
+            "细节可控性与可复现性不如代码"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 帮你设计“看板应该回答哪些问题”，再按问题组织页面",
+              "让 AI 给出指标口径说明模板（字段来源/计算公式/注意事项）"
+            ]
+          },
+          "alternatives": ["Excel", "pandas + matplotlib"]
+        }
+      ]
+    }
+    ,
+    {
+      "key": "pm",
+      "name": "协作 / 项目管理",
+      "description": "适合课程设计与软件工程类项目：任务分解、进度同步、文档沉淀与协作评审。",
+      "courseTags": ["课程设计/大作业", "团队协作", "软件工程/专业课"],
+      "tools": [
+        {
+          "id": "notion",
+          "name": "Notion",
+          "subtitle": "一体化工作区：文档 + 数据库 + 看板",
+          "description": "适合做项目文档与任务管理：需求、会议纪要、里程碑、缺陷列表都能放进一个空间。",
+          "links": [{ "label": "官网", "url": "https://www.notion.so/" }],
+          "platforms": ["Web", "Windows", "macOS", "Mobile"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["项目文档", "任务看板", "资料库"],
+          "courseTags": ["课程设计/大作业", "团队协作", "软件工程/专业课"],
+          "pros": [
+            "文档与数据库结合，适合沉淀项目资料",
+            "模板多，能快速搭出需求/任务/会议纪要体系",
+            "协作与权限管理方便"
+          ],
+          "cons": [
+            "离线能力有限，网络波动影响体验",
+            "数据库越做越复杂时维护成本高",
+            "注意隐私与合规，不要上传敏感信息"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 把需求拆成用户故事与验收标准，再落到看板任务",
+              "让 AI 将会议纪要提炼成行动项与风险点"
+            ]
+          },
+          "alternatives": ["飞书文档", "Trello", "GitHub Projects"]
+        },
+        {
+          "id": "trello",
+          "name": "Trello",
+          "subtitle": "轻量看板：任务流转非常直观",
+          "description": "适合小组作业的任务管理：待办/进行中/已完成，配合截止时间与检查清单。",
+          "links": [{ "label": "官网", "url": "https://trello.com/" }],
+          "platforms": ["Web", "Desktop", "Mobile"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["任务看板", "进度同步"],
+          "courseTags": ["课程设计/大作业", "团队协作"],
+          "pros": [
+            "看板直观，上手快，适合小团队",
+            "检查清单与截止时间适合追踪任务",
+            "无需复杂流程即可开始使用"
+          ],
+          "cons": [
+            "复杂项目的权限/流程能力有限",
+            "资料沉淀与文档能力不如一体化工具",
+            "依赖在线服务"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 按课程要求生成里程碑与任务拆分，再导入看板",
+              "让 AI 把任务风险与依赖关系列出来，提前规避卡点"
+            ]
+          },
+          "alternatives": ["Notion", "Jira", "GitHub Projects"]
+        },
+        {
+          "id": "jira",
+          "name": "Jira",
+          "subtitle": "敏捷项目管理：适合“真软件工程”课程项目",
+          "description": "适合按 Sprint 做项目的课程：需求、缺陷、看板与燃尽图更完整。",
+          "links": [{ "label": "官网", "url": "https://www.atlassian.com/software/jira" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["敏捷迭代", "缺陷管理", "Sprint"],
+          "courseTags": ["软件工程/专业课", "课程设计/大作业", "团队协作"],
+          "pros": [
+            "流程完整，适合实践敏捷与工程化管理",
+            "报表丰富，便于答辩展示过程管理",
+            "适合规模稍大的团队项目"
+          ],
+          "cons": [
+            "配置复杂，上手门槛较高",
+            "小项目可能“用力过猛”",
+            "依赖在线服务与账号体系"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 把评分点映射到工作流（需求→开发→测试→验收），形成清晰过程",
+              "让 AI 根据历史 issue 生成复盘要点与改进建议"
+            ]
+          },
+          "alternatives": ["Trello", "GitHub Projects"]
+        },
+        {
+          "id": "github-projects",
+          "name": "GitHub Projects",
+          "subtitle": "和代码仓库绑定的看板与 Roadmap",
+          "description": "适合代码托管在 GitHub 的课程项目：Issue/PR 与任务板联动，工程化更顺手。",
+          "links": [{ "label": "官网", "url": "https://github.com/features/issues" }],
+          "platforms": ["Web"],
+          "pricing": "免费",
+          "useCases": ["Issue 管理", "Roadmap", "看板"],
+          "courseTags": ["课程设计/大作业", "团队协作", "软件工程/专业课"],
+          "pros": [
+            "与 Issue/PR 天然联动，开发流程顺滑",
+            "适合把任务、讨论与代码放在同一处沉淀",
+            "适合答辩展示工程过程（issue、里程碑）"
+          ],
+          "cons": [
+            "对非开发同学不如纯文档工具直观",
+            "需要团队养成写 issue 的习惯",
+            "在线服务依赖网络环境"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 把需求拆成 issue 列表与验收标准，避免任务描述含糊",
+              "让 AI 生成 PR review checklist，提升协作质量"
+            ]
+          },
+          "alternatives": ["Notion", "Trello", "Jira"]
+        }
+      ]
+    }
+    ,
+    {
+      "key": "media",
+      "name": "截图 / 录屏 / 演示",
+      "description": "适合实验报告与项目展示：清晰截图、关键步骤动图、演示录屏。",
+      "courseTags": ["实验报告", "课程汇报/答辩", "所有课程"],
+      "tools": [
+        {
+          "id": "snipaste",
+          "name": "Snipaste",
+          "subtitle": "截图 + 贴图：写报告/做汇报的高频小工具",
+          "description": "适合做实验报告截图、做 PPT 配图：截图后可直接“贴在屏幕上”对照操作。",
+          "links": [{ "label": "官网", "url": "https://www.snipaste.com/" }],
+          "platforms": ["Windows", "macOS"],
+          "pricing": "免费（个人使用）",
+          "useCases": ["实验截图", "报告配图", "对照操作"],
+          "courseTags": ["实验报告", "所有课程"],
+          "pros": [
+            "截图效率高，标注/取色/贴图很顺手",
+            "贴图功能适合边看步骤边操作",
+            "轻量不打扰，适合日常高频使用"
+          ],
+          "cons": [
+            "复杂流程录制需要配合其他工具",
+            "长图/批量处理能力有限",
+            "需要自己管理图片命名与归档"
+          ],
+          "ai": {
+            "highlights": [
+              "把截图交给 AI 生成步骤说明/图注，再由你核对细节并精简",
+              "让 AI 给出“截图应包含哪些关键元素”的检查清单，避免漏关键信息"
+            ]
+          },
+          "alternatives": ["ShareX"]
+        },
+        {
+          "id": "sharex",
+          "name": "ShareX",
+          "subtitle": "截图/录屏/自动化工作流（Windows 强项）",
+          "description": "适合需要批量截图、长图、GIF 录制与自动命名归档的同学。",
+          "links": [{ "label": "官网", "url": "https://getsharex.com/" }],
+          "platforms": ["Windows"],
+          "pricing": "免费 / 开源",
+          "useCases": ["长截图", "GIF 录制", "自动化命名"],
+          "courseTags": ["实验报告", "所有课程"],
+          "pros": [
+            "功能全面：截图、录屏、自动化流程一体",
+            "可自定义命名与保存规则，适合实验归档",
+            "开源免费，可扩展性强"
+          ],
+          "cons": [
+            "功能很多，上手需要时间",
+            "界面偏“工程”，不如轻量工具直观",
+            "需要自己配置工作流才能发挥优势"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 帮你设计截图归档命名规范（实验名-步骤-时间），减少后期整理成本"
+            ]
+          },
+          "alternatives": ["Snipaste"]
+        },
+        {
+          "id": "screentogif",
+          "name": "ScreenToGif",
+          "subtitle": "录屏转 GIF：适合展示操作流程",
+          "description": "适合把软件操作录成小动图放进报告或 README：强调“怎么做”。",
+          "links": [{ "label": "官网", "url": "https://www.screentogif.com/" }],
+          "platforms": ["Windows"],
+          "pricing": "免费 / 开源",
+          "useCases": ["流程演示", "动图说明"],
+          "courseTags": ["实验报告", "课程设计/大作业"],
+          "pros": [
+            "录制 + 编辑一体（裁剪、加字幕、加帧）",
+            "适合做短小清晰的操作演示",
+            "输出 GIF 便于插入文档与网页"
+          ],
+          "cons": [
+            "长时录制与高质量视频不如专业录屏工具",
+            "文件体积可能较大，需要压缩与裁剪",
+            "Windows 平台为主"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 根据动图内容生成“步骤列表 + 注意事项”，再配合截图写报告"
+            ]
+          },
+          "alternatives": ["OBS Studio"]
+        },
+        {
+          "id": "obs",
+          "name": "OBS Studio",
+          "subtitle": "专业录屏/直播：适合项目演示与答辩录制",
+          "description": "适合录制项目 Demo、实验复现视频或答辩彩排；可叠加摄像头、字幕与多场景切换。",
+          "links": [{ "label": "官网", "url": "https://obsproject.com/" }],
+          "platforms": ["Windows", "macOS", "Linux"],
+          "pricing": "免费 / 开源",
+          "useCases": ["项目演示录制", "答辩录制", "课程视频"],
+          "courseTags": ["课程汇报/答辩", "课程设计/大作业"],
+          "pros": [
+            "功能专业，场景/音频/画面控制强",
+            "跨平台开源，社区资料丰富",
+            "适合录制高质量 Demo 与讲解视频"
+          ],
+          "cons": [
+            "上手门槛较高，需要调音频/分辨率/码率等参数",
+            "对电脑性能有一定要求",
+            "不适合只截几张图的小需求"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 给出“演示脚本”（开场-问题-方案-演示-总结），按脚本录制更清晰",
+              "让 AI 帮你写字幕初稿/口播稿，再根据实际演示调整"
+            ]
+          },
+          "alternatives": ["系统自带录屏", "ScreenToGif"]
+        }
+      ]
+    },
+    {
+      "key": "pdf",
+      "name": "PDF 处理（合并/拆分/压缩/转换）",
+      "description": "适合提交报告、作业与材料：合并拆分、压缩体积、加水印、图片↔PDF 等常见需求；如果不想资料上网，可以使用软件正版化中的福昕PDF编辑器本地软件功能。",
+      "courseTags": ["所有课程", "实验报告", "科研训练/论文写作", "毕业设计"],
+      "tools": [
+        {
+          "id": "ilovepdf",
+          "name": "iLovePDF",
+          "subtitle": "在线 PDF 工具箱：合并/拆分/压缩/转格式",
+          "description": "常用 PDF 全家桶：合并拆分、压缩、加页码/水印、PDF 与 Office/图片互转等。",
+          "links": [{ "label": "官网", "url": "https://www.ilovepdf.com/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 会员",
+          "useCases": ["合并/拆分 PDF", "压缩 PDF", "图片转 PDF", "PDF 转 Word"],
+          "courseTags": ["所有课程", "实验报告", "毕业设计"],
+          "pros": [
+            "功能覆盖面广，常见需求基本都能满足",
+            "操作简单，适合临时处理与快速交付",
+            "支持多种格式互转（视工具项而定）"
+          ],
+          "cons": [
+            "免费版可能有次数/大小/批量限制",
+            "需要上传文件到第三方服务，注意隐私与合规",
+            "复杂版式的 PDF 转 Word 结果可能需要二次排版"
+          ],
+          "alternatives": ["Smallpdf", "Sejda", "PDF24 Tools"]
+        },
+        {
+          "id": "smallpdf",
+          "name": "Smallpdf",
+          "subtitle": "在线 PDF 处理：压缩/编辑/签名/转换",
+          "description": "界面友好、流程清晰的在线 PDF 平台，适合对 PDF 做轻量编辑与压缩转换。",
+          "links": [{ "label": "官网", "url": "https://smallpdf.com/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["压缩 PDF", "PDF 转换", "PDF 编辑/签名"],
+          "courseTags": ["所有课程", "实验报告", "科研训练/论文写作"],
+          "pros": [
+            "交互体验好，上手快",
+            "压缩/转换效果稳定，适合交作业前处理体积",
+            "工具项齐全，覆盖多种常见场景"
+          ],
+          "cons": [
+            "免费额度有限，批量/高级功能通常需要订阅",
+            "上传第三方存在隐私风险，需要自查文件内容",
+            "复杂排版转换后仍可能出现错位"
+          ],
+          "alternatives": ["iLovePDF", "Adobe Acrobat Online"]
+        },
+        {
+          "id": "sejda",
+          "name": "Sejda",
+          "subtitle": "在线/桌面 PDF 编辑：填表、删页、合并等",
+          "description": "适合需要对 PDF 做细节编辑（删页、调整页面、填表等）的场景；也提供桌面版。",
+          "links": [{ "label": "官网", "url": "https://www.sejda.com/" }],
+          "platforms": ["Web", "Desktop"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["PDF 编辑", "页面管理", "填表/注释"],
+          "courseTags": ["所有课程", "毕业设计"],
+          "pros": [
+            "编辑能力相对更强，适合做细节处理",
+            "流程清晰，操作易懂",
+            "提供桌面版，部分场景可减少在线依赖"
+          ],
+          "cons": [
+            "免费版限制较多（次数/页数/大小）",
+            "在线模式仍需上传文件，注意隐私",
+            "桌面版需要安装，部分环境可能受限"
+          ],
+          "alternatives": ["Smallpdf", "PDF24 Tools"]
+        },
+        {
+          "id": "pdf24",
+          "name": "PDF24 Tools",
+          "subtitle": "PDF 工具集合（含网页工具与 Windows 工具箱）",
+          "description": "提供大量 PDF 小工具：压缩、合并、拆分、转格式、OCR 等；也有 Windows 版工具箱。",
+          "links": [{ "label": "官网", "url": "https://tools.pdf24.org/" }],
+          "platforms": ["Web", "Windows"],
+          "pricing": "免费",
+          "useCases": ["PDF 压缩", "合并拆分", "PDF 转换"],
+          "courseTags": ["所有课程", "实验报告"],
+          "pros": [
+            "功能非常全，且基础功能免费可用",
+            "可选本地 Windows 工具箱，适合离线处理",
+            "适合处理“各种小需求”的综合工具站"
+          ],
+          "cons": [
+            "页面入口多，首次使用需要找对应功能",
+            "在线处理仍涉及上传，需注意隐私与合规",
+            "不同工具项的效果与限制需要自己测试"
+          ],
+          "alternatives": ["iLovePDF", "Smallpdf"]
+        },
+        {
+          "id": "adobe-acrobat-online",
+          "name": "Adobe Acrobat Online",
+          "subtitle": "官方在线 PDF 工具：转换、压缩、签名等",
+          "description": "适合需要更稳定转换与官方工具链的场景（如 PDF→Word/Excel），同时也提供签名等功能。",
+          "links": [{ "label": "官网", "url": "https://www.adobe.com/acrobat/online.html" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["PDF 转换", "压缩", "签名"],
+          "courseTags": ["所有课程", "科研训练/论文写作", "毕业设计"],
+          "pros": [
+            "官方工具链，兼容性与稳定性通常较好",
+            "适合对 PDF 转换质量要求更高的场景",
+            "功能覆盖常见需求（转换、压缩、签名等）"
+          ],
+          "cons": [
+            "部分功能需要订阅/登录",
+            "在线处理仍需上传文件，注意隐私与合规",
+            "免费额度可能受限"
+          ],
+          "alternatives": ["Smallpdf", "Sejda"]
+        }
+      ]
+    },
+    {
+      "key": "ocr",
+      "name": "OCR / 图片文字提取",
+      "description": "适合把截图/扫描件里的文字转成可编辑文本，再用于写报告、做笔记与整理资料。",
+      "courseTags": ["所有课程", "实验报告", "科研训练/论文写作"],
+      "tools": [
+        {
+          "id": "google-lens",
+          "name": "Google Lens",
+          "subtitle": "截图/拍照提取文字 + 翻译（非常快）",
+          "description": "适合从截图/照片中快速提取文字并翻译；对临时查资料、整理课堂截图很高效。",
+          "links": [{ "label": "入口", "url": "https://lens.google.com/" }],
+          "platforms": ["Web", "Mobile"],
+          "pricing": "免费",
+          "useCases": ["图片文字提取", "截图翻译", "资料整理"],
+          "courseTags": ["所有课程", "实验报告"],
+          "pros": [
+            "速度快，提取+翻译一条龙",
+            "适合截图、拍照笔记、书页等场景",
+            "操作简单，几乎零学习成本"
+          ],
+          "cons": [
+            "依赖网络与可用性环境",
+            "识别结果需要校对，尤其是代码/公式/表格",
+            "涉及上传图片到第三方服务，注意隐私与合规"
+          ],
+          "ai": {
+            "highlights": [
+              "提取出文字后，让 AI 帮你整理成结构化笔记（大纲/要点/术语表），再人工校对",
+              "对代码/公式的识别结果让 AI 辅助检查（缺失字符/单位/上下标），但最终以原图为准"
+            ]
+          },
+          "alternatives": ["OCR.Space", "OnlineOCR"]
+        },
+        {
+          "id": "ocr-space",
+          "name": "OCR.Space",
+          "subtitle": "在线 OCR（含 API），支持多语言",
+          "description": "适合偶尔做 OCR 或需要简单接口调用：上传图片/PDF 输出可复制文本。",
+          "links": [{ "label": "官网", "url": "https://ocr.space/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 付费",
+          "useCases": ["图片 OCR", "PDF OCR", "批量（视额度）"],
+          "courseTags": ["所有课程", "科研训练/论文写作"],
+          "pros": [
+            "支持多语言与常见文件格式",
+            "提供 API，适合写脚本批量处理（视额度）",
+            "上手简单，适合临时提取文本"
+          ],
+          "cons": [
+            "免费额度有限，批量与大文件可能受限",
+            "识别质量与版式有关，表格/公式可能效果一般",
+            "上传第三方存在隐私风险，需要自查文件内容"
+          ],
+          "ai": {
+            "highlights": [
+              "OCR 后让 AI 自动分段、补标点、统一术语，再人工抽查关键段落",
+              "把 OCR 输出与原图对照，让 AI 标出可能识别错误的位置（提高校对效率）"
+            ]
+          },
+          "alternatives": ["OnlineOCR", "PDF24 Tools"]
+        },
+        {
+          "id": "onlineocr",
+          "name": "OnlineOCR",
+          "subtitle": "图片/PDF 转 Word/Excel（带 OCR）",
+          "description": "适合把扫描 PDF/图片转换成可编辑的 Word/Excel 文档，便于二次排版与引用。",
+          "links": [{ "label": "官网", "url": "https://www.onlineocr.net/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 付费",
+          "useCases": ["扫描件转 Word", "PDF 转可编辑文本"],
+          "courseTags": ["所有课程", "实验报告"],
+          "pros": [
+            "直接输出 Word/Excel，适合后续编辑",
+            "流程简单，适合临时转换需求",
+            "对扫描件的处理相对方便"
+          ],
+          "cons": [
+            "免费版限制较多（大小/页数/次数）",
+            "复杂排版转换后容易错位，需要二次修正",
+            "上传第三方存在隐私风险，注意合规"
+          ],
+          "ai": {
+            "highlights": [
+              "把转换后的 Word 交给 AI 做格式清理建议（标题层级、列表、术语统一），再人工确认",
+              "让 AI 帮你把识别后的内容归纳成“定义-公式-结论”卡片，用于复习"
+            ]
+          },
+          "alternatives": ["OCR.Space", "Adobe Acrobat Online"]
+        },
+        {
+          "id": "mathpix",
+          "name": "Mathpix Snip",
+          "subtitle": "公式/表格识别：图片→LaTeX/Markdown",
+          "description": "适合从课件/论文截图中提取公式与表格，快速得到 LaTeX/Markdown 版本用于报告与笔记。",
+          "links": [{ "label": "官网", "url": "https://mathpix.com/" }],
+          "platforms": ["Web", "Desktop", "Mobile"],
+          "pricing": "免费 + 订阅",
+          "useCases": ["公式 OCR", "表格转 Markdown", "论文摘录"],
+          "courseTags": ["科研训练/论文写作", "毕业设计", "实验报告"],
+          "pros": [
+            "对公式识别非常强，输出 LaTeX 可直接复用",
+            "适合写论文/报告时快速引用与排版",
+            "支持表格转 Markdown 等常见学术需求"
+          ],
+          "cons": [
+            "免费额度有限，重度使用通常需要订阅",
+            "识别仍可能出错，必须与原图核对",
+            "注意隐私与版权，不要上传敏感材料"
+          ],
+          "ai": {
+            "highlights": [
+              "识别出 LaTeX 后，让 AI 帮你解释公式符号与推导思路（用于写“原理说明”）",
+              "让 AI 帮你检查 LaTeX 是否缺括号/上下标，减少排版报错"
+            ]
+          },
+          "alternatives": ["手写 LaTeX", "OCR.Space（通用 OCR）"]
+        }
+      ]
+    },
+    {
+      "key": "image",
+      "name": "图片处理（压缩/去背景/编辑）",
+      "description": "适合做 PPT 配图与报告插图：压缩体积、去背景、快速修图与格式转换。",
+      "courseTags": ["所有课程", "课程汇报/答辩", "实验报告"],
+      "tools": [
+        {
+          "id": "tinypng",
+          "name": "TinyPNG / TinyJPG",
+          "subtitle": "高质量图片压缩（Web）",
+          "description": "适合在不明显损失画质的情况下压缩 PNG/JPG，用于报告/PPT 减小文件体积。",
+          "links": [{ "label": "官网", "url": "https://tinypng.com/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 付费（API）",
+          "useCases": ["图片压缩", "减小报告体积"],
+          "courseTags": ["所有课程", "实验报告", "课程汇报/答辩"],
+          "pros": [
+            "压缩效果好，画质损失相对小",
+            "操作极简，拖拽上传即可",
+            "适合把报告/PPT 控制到规定大小以内"
+          ],
+          "cons": [
+            "免费版有单次数量/大小限制",
+            "需要上传图片到第三方服务，注意隐私",
+            "不适合需要精细控制参数的压缩场景"
+          ],
+          "alternatives": ["Squoosh", "iLoveIMG"]
+        },
+        {
+          "id": "squoosh",
+          "name": "Squoosh",
+          "subtitle": "开源在线压缩/转码（可在浏览器本地处理）",
+          "description": "适合想要更可控的压缩与格式转换：可调质量参数，实时预览对比，很多处理可在本地浏览器完成。",
+          "links": [{ "label": "官网", "url": "https://squoosh.app/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 / 开源",
+          "useCases": ["压缩", "格式转换", "质量对比"],
+          "courseTags": ["所有课程", "实验报告", "课程汇报/答辩"],
+          "pros": [
+            "参数可控，支持实时预览对比",
+            "开源且很多处理可在本地浏览器完成（更利于隐私）",
+            "支持多种编码与格式选择"
+          ],
+          "cons": [
+            "界面偏“工具型”，新手需要适应参数含义",
+            "批量处理能力有限",
+            "对超大图片可能性能一般"
+          ],
+          "alternatives": ["TinyPNG", "ImageMagick"]
+        },
+        {
+          "id": "removebg",
+          "name": "remove.bg",
+          "subtitle": "AI 去背景（抠图）",
+          "description": "适合做 PPT 配图：快速把人物/物体从背景中抠出来，生成透明背景图。",
+          "links": [{ "label": "官网", "url": "https://www.remove.bg/" }],
+          "platforms": ["Web"],
+          "pricing": "免费（预览/低分辨率）+ 付费（高清）",
+          "useCases": ["抠图", "去背景", "PPT 配图"],
+          "courseTags": ["所有课程", "课程汇报/答辩"],
+          "pros": [
+            "抠图速度快，适合应急做汇报",
+            "对常见人物/物体效果好",
+            "几乎零学习成本"
+          ],
+          "cons": [
+            "复杂边缘（头发/透明物体）可能处理不完美",
+            "高清导出通常需要付费",
+            "上传第三方存在隐私风险"
+          ],
+          "ai": {
+            "highlights": [
+              "用 AI 去背景后，让 AI 帮你建议“放到 PPT 上的最佳布局/配色/阴影”，再手动微调",
+              "对抠图瑕疵，让 AI 指出需要修补的边缘区域（提高修图效率）"
+            ]
+          },
+          "alternatives": ["Photopea", "Canva"]
+        },
+        {
+          "id": "iloveimg",
+          "name": "iLoveIMG",
+          "subtitle": "在线图片工具箱：压缩/裁剪/改尺寸/转格式",
+          "description": "适合对图片做常规处理：压缩、裁剪、改尺寸、转格式、加水印等。",
+          "links": [{ "label": "官网", "url": "https://www.iloveimg.com/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 会员",
+          "useCases": ["压缩", "改尺寸", "格式转换", "加水印"],
+          "courseTags": ["所有课程", "实验报告", "课程汇报/答辩"],
+          "pros": [
+            "工具项齐全，覆盖常见图片处理需求",
+            "操作简单，适合临时快速处理",
+            "支持批量处理（视额度/会员）"
+          ],
+          "cons": [
+            "免费版可能有批量/大小限制",
+            "需要上传到第三方服务，注意隐私",
+            "对精细修图不如专业工具"
+          ],
+          "alternatives": ["Squoosh", "TinyPNG"]
+        },
+        {
+          "id": "photopea",
+          "name": "Photopea",
+          "subtitle": "在线 PS：支持 PSD，适合更复杂修图",
+          "description": "适合需要更复杂编辑（抠图精修、图层、PSD）的场景，且不方便安装软件时可用。",
+          "links": [{ "label": "官网", "url": "https://www.photopea.com/" }],
+          "platforms": ["Web"],
+          "pricing": "免费（广告）+ 付费（无广告）",
+          "useCases": ["修图", "PSD 编辑", "图层处理"],
+          "courseTags": ["课程汇报/答辩", "实验报告", "所有课程"],
+          "pros": [
+            "功能接近 PS，支持图层与 PSD",
+            "无需安装，打开就能用",
+            "适合做抠图精修与版面细节调整"
+          ],
+          "cons": [
+            "学习成本较高，界面偏专业",
+            "依赖浏览器性能，大文件可能卡顿",
+            "注意隐私与版权（尽量使用非敏感素材）"
+          ],
+          "alternatives": ["GIMP", "Figma"]
+        }
+      ]
+    },
+    {
+      "key": "convert",
+      "name": "格式转换 / 转码（音视频/文档/图片）",
+      "description": "适合把文件转换成提交或演示需要的格式：视频转 MP4、音频转 MP3、文档/图片转常用格式等。",
+      "courseTags": ["所有课程", "课程汇报/答辩", "课程设计/大作业"],
+      "tools": [
+        {
+          "id": "cloudconvert",
+          "name": "CloudConvert",
+          "subtitle": "高质量在线转换：支持非常多格式",
+          "description": "适合需要更高兼容性的文件转换：支持音视频/文档/图片/压缩包等多种格式。",
+          "links": [{ "label": "官网", "url": "https://cloudconvert.com/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 付费（按额度）",
+          "useCases": ["视频转码", "音频转换", "文档转换", "图片转换"],
+          "courseTags": ["课程汇报/答辩", "课程设计/大作业", "所有课程"],
+          "pros": [
+            "格式覆盖面广，转换选项相对丰富",
+            "输出兼容性好，适合交付与演示",
+            "支持队列/批量（视额度）"
+          ],
+          "cons": [
+            "免费额度有限，转换大文件可能需要付费",
+            "上传第三方存在隐私风险，避免敏感文件",
+            "音视频转码耗时与稳定性受网络影响"
+          ],
+          "alternatives": ["Convertio", "HandBrake", "FFmpeg"]
+        },
+        {
+          "id": "convertio",
+          "name": "Convertio",
+          "subtitle": "在线格式转换（支持多种文件类型）",
+          "description": "适合临时把文件转成常用格式：图片/音频/视频/文档都能覆盖。",
+          "links": [{ "label": "官网", "url": "https://convertio.co/zh/" }],
+          "platforms": ["Web"],
+          "pricing": "免费 + 付费",
+          "useCases": ["格式转换", "视频转 MP4", "音频转 MP3"],
+          "courseTags": ["所有课程", "课程汇报/答辩"],
+          "pros": [
+            "上手简单，覆盖常见格式转换需求",
+            "支持中文界面，流程清晰",
+            "适合应急转换与快速交付"
+          ],
+          "cons": [
+            "免费版大小/次数限制较明显",
+            "上传第三方存在隐私风险",
+            "对高质量转码的参数控制不如本地工具"
+          ],
+          "alternatives": ["CloudConvert", "HandBrake"]
+        },
+        {
+          "id": "handbrake",
+          "name": "HandBrake",
+          "subtitle": "本地视频转码（开源）：MP4/H.264 等常用格式",
+          "description": "适合需要稳定、可控的视频转码：把录屏/演示视频压缩成更小、更兼容的 MP4。",
+          "links": [{ "label": "官网", "url": "https://handbrake.fr/" }],
+          "platforms": ["Windows", "macOS", "Linux"],
+          "pricing": "免费 / 开源",
+          "useCases": ["视频转 MP4", "压缩体积", "兼容性处理"],
+          "courseTags": ["课程汇报/答辩", "课程设计/大作业"],
+          "pros": [
+            "本地处理，不用上传文件（隐私更好）",
+            "参数可控，适合压缩与兼容性优化",
+            "开源免费，跨平台"
+          ],
+          "cons": [
+            "学习成本略高，需要理解码率/分辨率等参数",
+            "对超长视频转码耗时较长",
+            "不适合仅做小文件在线应急转换"
+          ],
+          "alternatives": ["FFmpeg", "CloudConvert"]
+        },
+        {
+          "id": "ffmpeg",
+          "name": "FFmpeg",
+          "subtitle": "命令行音视频工具（开源）：转码/裁剪/抽帧",
+          "description": "适合需要更灵活的视频处理：转码、裁剪、抽帧、合并音视频等；适合写脚本批量处理。",
+          "links": [{ "label": "官网", "url": "https://ffmpeg.org/" }],
+          "platforms": ["Windows", "macOS", "Linux"],
+          "pricing": "免费 / 开源",
+          "useCases": ["转码", "裁剪", "抽帧", "批量处理"],
+          "courseTags": ["课程设计/大作业", "编程课/实验"],
+          "pros": [
+            "功能极强且可脚本化，适合批量与自动化",
+            "本地处理，隐私更好",
+            "跨平台开源，生态资料丰富"
+          ],
+          "cons": [
+            "上手门槛高，需要记参数与命令",
+            "容易“用力过猛”，小需求不如 GUI 工具快捷",
+            "参数不当会影响清晰度/体积，需要测试"
+          ],
+          "ai": {
+            "highlights": [
+              "让 AI 根据你的目标（清晰度/体积/时长）生成 FFmpeg 命令草稿，再小样本验证后批量跑",
+              "让 AI 帮你设计“导出规格”清单（分辨率/码率/帧率/音频），避免反复试错"
+            ]
+          },
+          "alternatives": ["HandBrake"]
+        }
+      ]
+    }
+  ]
+}
