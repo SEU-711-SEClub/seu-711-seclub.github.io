@@ -47,7 +47,10 @@ const UpdateRefreshBanner: React.FC = () => {
 
   const handleRefresh = () => {
     sessionStorage.removeItem(VERSION_STORAGE_KEY);
-    window.location.reload();
+    // 通过带时间戳的 URL 强制绕过浏览器缓存，避免 Edge 等仍加载旧页面
+    const url = new URL(window.location.href);
+    url.searchParams.set('_', String(Date.now()));
+    window.location.replace(url.pathname + url.search + url.hash);
   };
 
   if (!showBanner) return null;
