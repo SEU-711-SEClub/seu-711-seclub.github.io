@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import UpdateRefreshBanner from './components/UpdateRefreshBanner';
 import Home from './pages/Home';
 import About from './pages/About';
 import Experiences from './pages/Experiences';
@@ -13,6 +14,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-background-gradient">
+        <UpdateRefreshBanner />
         <Navbar />
         <main>
           <Routes>

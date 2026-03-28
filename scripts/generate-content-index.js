@@ -156,6 +156,12 @@ function generateContentIndex() {
   // 将索引写入JSON文件
   const indexPath = path.join(contentDir, 'index.json');
   fs.writeFileSync(indexPath, JSON.stringify(index, null, 2), 'utf-8');
+
+  // 写入部署版本号（用于前端检测更新并提示刷新）
+  const publicDir = path.join(process.cwd(), 'public');
+  const versionPath = path.join(publicDir, 'version.json');
+  const version = process.env.GITHUB_SHA || String(Date.now());
+  fs.writeFileSync(versionPath, JSON.stringify({ version }, null, 0), 'utf-8');
   
   console.log('内容索引生成完成！');
   console.log(`- 经验分享总数: ${index.experiences.all.length}`);
