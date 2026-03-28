@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Info, ClipboardList, Timer, ArrowRight, Target, ChevronRight, ZoomIn, X, Sparkles } from 'lucide-react';
+import { Info, ClipboardList, Timer, ArrowRight, Target, ChevronRight, ZoomIn, X, Sparkles, FileCheck } from 'lucide-react';
 import {
   useContentIndex,
   useUndergradSummary,
@@ -9,8 +9,9 @@ import {
 import useScrollToTop from '../hooks/useScrollToTop';
 import { RichText } from '../lib/richText';
 import UndergradToolsPanel from '../components/UndergradTools/UndergradToolsPanel';
+import UndergradDeparturePanel from '../components/UndergradDeparture/UndergradDeparturePanel';
 
-type TabKey = 'requirements' | 'projects' | 'tools';
+type TabKey = 'requirements' | 'projects' | 'departure' | 'tools';
 
 type TimelineImage = {
   src: string;
@@ -310,7 +311,7 @@ const Undergrad = () => {
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const tab = params.get('tab');
-    if (tab === 'projects' || tab === 'requirements' || tab === 'tools') {
+    if (tab === 'projects' || tab === 'requirements' || tab === 'departure' || tab === 'tools') {
       setActiveTab(tab as TabKey);
     }
   }, [location.search]);
@@ -324,23 +325,20 @@ const Undergrad = () => {
 
   const requirements = index?.undergrad?.requirements || [];
 
-  const timelineAxis = timeline?.axis || [];
-  const intervals = timeline?.intervals || [];
-
   const filteredAxis = useMemo(
     () =>
-      timelineAxis.filter(
+      (timeline?.axis || []).filter(
         axis => !axis.categories || axis.categories.includes(activeTimelineCategory || '')
       ),
-    [timelineAxis, activeTimelineCategory]
+    [timeline, activeTimelineCategory]
   );
 
   const applicableIntervals = useMemo(
     () =>
-      intervals.filter(
+      (timeline?.intervals || []).filter(
         interval => !interval.categories || interval.categories.includes(activeTimelineCategory || '')
       ),
-    [intervals, activeTimelineCategory]
+    [timeline, activeTimelineCategory]
   );
 
   const intervalMap = useMemo(() => {
@@ -359,13 +357,13 @@ const Undergrad = () => {
 
   const uniqueModules = useMemo(() => {
     const map = new Map<string, (typeof summary.modules)[number]>();
-    summary?.modules?.forEach(m => {
+    (summary?.modules || []).forEach(m => {
       if (!map.has(m.key)) {
         map.set(m.key, m);
       }
     });
     return Array.from(map.values());
-  }, [summary?.modules]);
+  }, [summary]);
 
   const renderRequirements = () => (
     <div className="space-y-8">
@@ -671,11 +669,11 @@ const Undergrad = () => {
         <header className="mb-10 text-center">
           <p className="inline-flex items-center rounded-full bg-primary-50 px-4 py-2 text-caption text-primary-700 font-semibold">
             <Info size={14} className="mr-2" />
-            本科培养 · 毕业要求 & 毕业设计 & 提效工具
+            本科培养 · 毕业要求 & 毕业设计 & 毕业离校 & 提效工具
           </p>
           <h1 className="text-h1 font-bold text-primary-900 mt-4 mb-3">本科培养导航</h1>
           <p className="text-body-lg text-neutral-700 max-w-3xl mx-auto">
-            可视化查看毕业要求达成情况，按分类切换毕业设计时间轴，并按课程场景筛选提效工具。
+            可视化查看毕业要求达成情况、毕业设计时间轴、本科离校指南，并按课程场景筛选提效工具。
           </p>
         </header>
 
@@ -683,6 +681,7 @@ const Undergrad = () => {
           {[
             { key: 'requirements', label: '毕业要求概览', icon: ClipboardList },
             { key: 'projects', label: '毕业设计时间轴', icon: Target },
+            { key: 'departure', label: '毕业离校指南', icon: FileCheck },
             { key: 'tools', label: '提效工具库', icon: Sparkles },
           ].map(tab => {
             const Icon = tab.icon;
@@ -708,6 +707,8 @@ const Undergrad = () => {
             renderRequirements()
           ) : activeTab === 'projects' ? (
             renderTimeline()
+          ) : activeTab === 'departure' ? (
+            <UndergradDeparturePanel />
           ) : (
             <UndergradToolsPanel />
           )}

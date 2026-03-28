@@ -19,7 +19,13 @@
       { "src": "/content/undergrad/projects/images/毕业设计管理系统-查看任务书页面.png", "alt": "毕业设计管理系统-查看任务书页面", "scale": 0.15 }
       ]
     },
-    { "id": "proposal", "date": "2026-01-25", "label": "开题报告/译文提交", "note": "提交开题报告及 ≥5000 字译文，导师审核。", "categories": ["保研本校", "保研外校本校挂名毕设", "保研外校实际外校毕设", "出国升学", "本科就业"] },
+    { "id": "proposal", "date": "2026-03-09", "label": "开题报告/译文提交", "note": "提交开题报告及 ≥5000 字译文，导师审核。", 
+      "categories": ["保研本校", "保研外校本校挂名毕设", "保研外校实际外校毕设", "出国升学", "本科就业"],
+      "image": [
+      { "src": "/content/undergrad/projects/images/毕业设计管理系统-开题报告上传.png", "alt": "毕业设计管理系统-开题报告上传", "scale": 0.15 },
+      { "src": "/content/undergrad/projects/images/毕业设计管理系统-翻译译文上传.png", "alt": "毕业设计管理系统-翻译译文上传", "scale": 0.15 }
+      ]
+    },
 
 
     { "id": "apply-extend", "date": "2026-01-15", "label": "延长：申报/课题上报", 

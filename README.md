@@ -3,7 +3,8 @@
 一个温暖专业的软件学院交流社区官网，支持动态内容管理，便于维护更新。
 
 ## 🔥最近更新
-- 2026-01-01：🚀新增本科培养「提效工具库」：按分类整理工具，支持搜索、含 AI 用法、课程标签/平台/费用/分类筛选；优化毕业设计时间轴右侧图片布局：多图缩略自动排版，整体更紧凑并尽量与文本高度对齐。
+- 2026-03-28：🚀本科培养专区新增「本科毕业离校指南」分页；补充毕业要求页面“省流版”说明；更新毕业设计时间轴开题报告/译文提交节点与配图。
+- 2026-01-01：✨新增本科培养「提效工具库」：按分类整理工具，支持搜索、含 AI 用法、课程标签/平台/费用/分类筛选；优化毕业设计时间轴右侧图片布局：多图缩略自动排版，整体更紧凑并尽量与文本高度对齐。
 - 2025-12-20：✨完善本科培养专区：毕业要求按“毕业要求/达成途径”分段展示；毕业设计时间轴支持 RichText 颜色标注等格式、右侧多图缩略与点击放大预览；优化 Markdown 嵌套列表层级显示。
 - 2025-12-14：✨更新本科毕业要求与毕业设计时间轴文档，补充更新 README 维护说明。
 - 2025-11-09：✨内容中心新增标签引导信息块（含图标/配图提示）；更新 README 与内容管理指南，补充分类引导与目录结构；调整求职分类提示，指向社团招聘/交流信息。
@@ -14,7 +15,7 @@
 ### 核心功能
 - **8个完整页面**：首页、关于我们、交流社区、经验分享、生涯规划、活动中心、加入我们、成员专区
 - **分类引导区**：内容中心按标签展示对应的引导提示、关键要点与配图，快速了解不同成长路径
-- **本科培养专区**：毕业要求概览、毕业设计时间轴、提效工具库（搜索/含 AI 用法/课程标签/平台/费用/分类筛选）
+- **本科培养专区**：毕业要求概览、毕业设计时间轴、本科毕业离校指南、提效工具库（搜索/含 AI 用法/课程标签/平台/费用/分类筛选）
 - **动态内容系统**：真正的Markdown文件读取和管理
 - **响应式设计**：桌面3-4列，平板2列，移动单列完美适配
 - **毛玻璃效果**：活动中心和交流社区的科技感界面
@@ -68,6 +69,8 @@ pnpm run build:content
 │  │  ├── Navbar.tsx        # 导航栏
 │  │  ├── Footer.tsx        # 页脚
 │  │  ├── MarkdownRenderer.tsx  # Markdown渲染器
+│  │  ├── UndergradDeparture/ # 本科培养 · 毕业离校指南
+│  │  │  └── UndergradDeparturePanel.tsx  # 离校指南页面面板
 │  │  └── UndergradTools/    # 本科培养 · 提效工具库
 │  │      ├── UndergradToolsPanel.tsx  # 工具库页面面板
 │  │      ├── ToolsFilters.tsx         # 筛选区（搜索/课程标签/平台/费用/分类）
@@ -85,7 +88,7 @@ pnpm run build:content
 │  │  ├── Community.tsx     # 交流社区
 │  │  ├── Experiences.tsx   # 经验分享/内容中心
 │  │  ├── Career.tsx        # 生涯规划
-│  │  ├── Undergrad.tsx     # 本科培养（毕业要求/毕业设计/提效工具库）
+│  │  ├── Undergrad.tsx     # 本科培养（毕业要求/毕业设计/毕业离校/提效工具库）
 │  │  ├── Join.tsx          # 加入我们
 │  │  └── Member.tsx        # 成员专区
 │  └── App.tsx              # 应用入口
@@ -103,6 +106,8 @@ pnpm run build:content
 │  │  │  ├── requirements/
 │  │  │  │  ├── summary.json      # 毕业要求索引
 │  │  │  │  └── *.md              # 毕业要求详情
+│  │  │  ├── departure/
+│  │  │  │  └── guide.md          # 本科毕业离校指南正文
 │  │  │  ├── projects/
 │  │  │  │  ├── timeline.json    # 毕业设计时间轴
 │  │  │  │  └── images/          # 时间轴配图（支持放大查看）
@@ -169,12 +174,17 @@ excerpt: "文章摘要"
 
 详细说明请参考 [CONTENT_MANAGEMENT.md](./CONTENT_MANAGEMENT.md)
 
-### 本科毕业要求与毕业设计时间轴
+### 本科毕业要求、毕业设计时间轴与离校指南
 
-- 页面：`/undergrad?tab=requirements`（毕业要求）、`/undergrad?tab=projects`（毕业设计时间轴），URL 可直接切换 tab。
+- 页面：`/undergrad?tab=requirements`（毕业要求）、`/undergrad?tab=projects`（毕业设计时间轴）、`/undergrad?tab=departure`（本科毕业离校指南），URL 可直接切换 tab。
 - 毕业要求数据：
   - 列表索引：`public/content/undergrad/requirements/summary.json`（指向各 Markdown）。
   - 详情 Markdown：`public/content/undergrad/requirements/*.md`，统一按 `## 毕业要求` / `## 达成途径` 分段组织内容。
+  - 说明：当前部分要求详情额外补充了“省流版”提示，可直接在对应 Markdown 中维护。
+- 本科毕业离校指南：
+  - 正文内容：`public/content/undergrad/departure/guide.md`（前端直接 fetch，不依赖 `public/content/index.json` 内容索引）。
+  - 页面面板：`src/components/UndergradDeparture/UndergradDeparturePanel.tsx`
+  - 首屏说明卡与快捷提示在 `UndergradDeparturePanel.tsx` 中维护；正文部分使用 `MarkdownRenderer` 渲染 `guide.md`。
 - 毕业设计时间轴数据：`public/content/undergrad/projects/timeline.json`
   - 节点/区间可通过 `categories` 指定可见分类（延期节点仅在考研升学/学分积欠可见，正常节点仅在其他分类可见）。
   - 两时间点之间的任务写在对应分类的 `ranges`（按 `intervalId` 关联）中：`detail`/`links`/`image`。
@@ -184,7 +194,7 @@ excerpt: "文章摘要"
 - 维护流程：
   1) 编辑上述 JSON/Markdown。
   2) 运行 `npm run build:content` 生成最新索引。
-  3) 如需跳转到时间轴，可在文档中使用 `/undergrad?tab=projects` 链接。
+  3) 如需跳转到对应 tab，可在文档中使用 `/undergrad?tab=requirements`、`/undergrad?tab=projects`、`/undergrad?tab=departure` 链接。
 
 ### 本科提效工具库（Undergrad Tools）
 
@@ -293,6 +303,11 @@ excerpt: "文章摘要"
 - 改页面与组件：`src/components/UndergradTools/UndergradToolsPanel.tsx`、`src/components/UndergradTools/ToolsFilters.tsx`、`src/components/UndergradTools/ToolCard.tsx`
 - 改数据加载：`src/hooks/useUndergradTools.ts`（并在 `src/hooks/useContent.ts` 中兼容导出）
 
+### 维护「本科毕业离校指南」
+- 改正文：编辑 `public/content/undergrad/departure/guide.md`，正文支持 Markdown。
+- 改首屏提示卡：编辑 `src/components/UndergradDeparture/UndergradDeparturePanel.tsx`。
+- 本地查看：`pnpm run dev` 后访问 `/#/undergrad?tab=departure`。
+
 ## 📄 许可证
 
 MIT License
@@ -309,6 +324,6 @@ MIT License
 
 ---
 
-**最后更新**：2026-01-01
-**版本**：v1.3.1 
+**最后更新**：2026-03-28
+**版本**：v1.3.2 
 **作者**：LiuMengxuan 等
